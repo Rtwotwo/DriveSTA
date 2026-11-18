@@ -14,6 +14,14 @@
 
 [中文快速开始](docs/QUICKSTART_zh.md)
 
+## DriveSTA at a Glance
+
+![DriveSTA at a glance](docs/assets/images/drivesta-teaser.png)
+
+Human driving logs record one executed trajectory per scene, while an end-to-end planner must generate and compare multiple feasible choices. **DriveSTA** turns a single demonstration into scored trajectory alternatives: we construct candidate paths, evaluate their execution, and retain diverse, high-quality targets to supervise planning. A shared Joint-Embedding Predictive Architecture (JEPA) encoder provides efficient temporal context from observed video. DriveSTA reaches **95.1 PDMS on NAVTEST** with NAVSIM-only training; DriveSTA-Scale, trained with real and synthetic data, achieves **95.6 PDMS**, along with **56.1 route completion** and **46.7 HD-Score** on HUGSIM.
+
+## Method
+
 ![DriveSTA method overview](docs/assets/images/overview.png)
 
 ## Start here
@@ -83,6 +91,10 @@ weights/                            # Checkpoints, initialization backbones and 
 ```
 
 The organization follows the NAVSIM conventions used by [ChainFlow-VLA](https://github.com/AFARI-Research/ChainFlow-VLA), while DriveSTA's public model and configuration names describe its own capabilities. Historical serialized identifiers are handled only at compatibility boundaries. Third-party library names and license notices retain their original attribution.
+
+## Acknowledgements
+
+Our code builds on [ChainFlow-VLA](https://github.com/AFARI-Research/ChainFlow-VLA), [FPD-Drive](https://github.com/CountNemoChan/FPD-Drive), [DrivoR](https://github.com/valeoai/DrivoR), and [NAVSIM](https://github.com/autonomousvision/navsim).
 
 ## License and validation
 
