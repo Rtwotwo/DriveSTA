@@ -1,9 +1,11 @@
 """Check the static website and its declared media without third-party packages."""
 from pathlib import Path
 from html.parser import HTMLParser
-import csv,json,re
+import argparse,csv,json,re
 ROOT=Path(__file__).resolve().parents[1]
-SITE=ROOT/'docs'
+ap=argparse.ArgumentParser(description=__doc__)
+ap.add_argument('--site-root',type=Path,default=ROOT/'docs',help='Source or built static website directory')
+SITE=ap.parse_args().site_root.resolve()
 class Parser(HTMLParser):
  def __init__(self):super().__init__();self.refs=[];self.ids=set()
  def handle_starttag(self,tag,attrs):
@@ -35,7 +37,9 @@ for name,count in [('navtest-scores.csv',12146),('hugsim-scores.csv',345)]:
  with (SITE/'assets/data'/name).open(newline='') as f:rows=list(csv.DictReader(f))
  assert len(rows)==count,(name,len(rows))
  assert 'output' not in rows[0]
-for f in SITE.rglob('*'):
+# Release tutorials and validation reports are repository documents, not website assets.
+website_files=[SITE/'index.html',SITE/'app.js',SITE/'style.css',*(SITE/'assets').rglob('*')]
+for f in website_files:
  if not f.is_file():continue
  assert f.stat().st_size<100*1024*1024,('GitHub file limit',f)
  if f.suffix in ['.html','.js','.css','.json','.svg','.vtt','.csv']:
@@ -47,5 +51,14 @@ assert len(list((SITE/'assets/videos/navtest').glob('*.mp4')))==41
 edit=json.loads((SITE/'assets/data/demo-edit.json').read_text())
 assert edit['duration_s']>300 and edit['navtest_cases']==41
 assert {x['difficulty'] for x in edit['hugsim_selection']}=={'easy','medium','hard','extreme'}
+
+# README resource buttons must remain usable independently of the deployed site.
+readme=Parser();readme.feed((ROOT/'README.md').read_text(encoding='utf-8'))
+for ref in readme.refs:
+ if not ref.startswith(('http:','https:','mailto:','data:','#')):
+  assert (ROOT/ref.split('#')[0].split('?')[0]).is_file(),('README resource',ref)
+links=json.loads((SITE/'assets/data/links.json').read_text())
+assert links['code']=='https://github.com/Rtwotwo/DriveSTA'
+assert links['hf']=='https://huggingface.co/Rtwotwo/DriveSTA'
 
 print('PASS: references, 41 NAVTEST cases, 51 HUGSIM episodes, four difficulties, score counts, long-demo manifest, sizes, UTF-8, public paths.')

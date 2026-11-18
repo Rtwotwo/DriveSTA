@@ -19,3 +19,6 @@ test-results/
 build/
 dist/
 *.egg-info/
+
+# GitHub Pages build output
+/_site/
