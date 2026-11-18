@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="178mm" height="93.6945mm" viewBox="0 0 1820 958">
-<title>DriveTraj: constructed supervision for proposal generation, refinement and scoring</title>
+<title>DriveSTA: constructed supervision for proposal generation, refinement and scoring</title>
 <defs>
 <marker id="flow" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#20282E"/></marker>
 <marker id="training" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#49785E"/></marker>
@@ -143,7 +143,7 @@
 </g>
 <g id="planner">
 <rect x="20" y="463" width="1160" height="460" rx="17" fill="#DCEFF3" stroke="#A9D7E2" stroke-width="2.7" stroke-dasharray="10 8"/>
-<text x="49" y="506" font-family="Comic Sans MS, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="start" fill="#20282E">DriveTraj</text>
+<text x="49" y="506" font-family="Comic Sans MS, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="start" fill="#20282E">DriveSTA</text>
 <rect x="60" y="552" width="135.5" height="32" rx="5" fill="#D9E5B6" stroke="none" stroke-width="0"/>
 <text x="127.75" y="576" font-family="Comic Sans MS, Arial, sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20282E">Scene</text>
 <rect x="204.5" y="552" width="135.5" height="32" rx="5" fill="#F4D1B4" stroke="none" stroke-width="0"/>
@@ -214,16 +214,16 @@
 <path d="M340 659 L475 659" fill="none" stroke="#20282E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#flow)"/>
 <path d="M405 652 L405 666 M409 652 L409 666" fill="none" stroke="#52606D" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
 </g>
-<g id="edge_stage1_candidates">
+<g id="edge_proposal_candidates">
 <path d="M200 708 L200 807" fill="none" stroke="#20282E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#flow)"/>
 <path d="M193 720 L207 720 M193 725 L207 725" fill="none" stroke="#52606D" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
-<text x="181" y="752" font-family="Comic Sans MS, Arial, sans-serif" font-size="23" font-weight="700" text-anchor="end" fill="#20282E">Stage 1</text>
+<text x="181" y="752" font-family="Comic Sans MS, Arial, sans-serif" font-size="23" font-weight="700" text-anchor="end" fill="#20282E">Proposal</text>
 <text x="181" y="779" font-family="Comic Sans MS, Arial, sans-serif" font-size="20" font-weight="400" text-anchor="end" fill="#20282E">AR proposals</text>
 </g>
-<g id="edge_stage2_candidates">
+<g id="edge_refinement_candidates">
 <path d="M615 708 L615 807" fill="none" stroke="#20282E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#flow)"/>
 <path d="M608 720 L622 720 M608 725 L622 725" fill="none" stroke="#52606D" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
-<text x="634" y="752" font-family="Comic Sans MS, Arial, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#20282E">Stage 2</text>
+<text x="634" y="752" font-family="Comic Sans MS, Arial, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#20282E">Refinement</text>
 <text x="634" y="779" font-family="Comic Sans MS, Arial, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#20282E">Refined paths</text>
 </g>
 <g id="scorer_conditions">
@@ -549,8 +549,8 @@
 <text x="1696" y="447" font-family="Comic Sans MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle" fill="#20282E">All scores</text>
 </g>
 </g>
-<g id="stage1_training">
-<text x="1519" y="507" font-family="Comic Sans MS, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle" fill="#20282E">Stage 1 · dense supervision</text>
+<g id="proposal_training">
+<text x="1519" y="507" font-family="Comic Sans MS, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle" fill="#20282E">Proposal · dense supervision</text>
 <rect x="1291" y="539" width="33" height="44" rx="4" fill="white" stroke="#ACBAC1" stroke-width="1"/>
 <path d="M1307.50 578.00 L1307.48 576.37 L1307.49 574.03 L1307.63 570.72 L1307.86 566.44 L1308.15 561.46 L1308.37 556.16 L1308.49 550.90 L1308.49 545.88" fill="none" stroke="#49785E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
 <circle cx="1308.4897632598877" cy="545.877545674642" r="2" fill="#49785E" stroke="none" stroke-width="1"/>
@@ -609,8 +609,8 @@
 <text x="1641" y="717" font-family="Comic Sans MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle" fill="#20282E">PDM score calibration</text>
 <path d="M1248 732 H1790" fill="none" stroke="#ACBAC1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="1" stroke-dasharray="7 6"/>
 </g>
-<g id="stage2_training">
-<text x="1519" y="766" font-family="Comic Sans MS, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle" fill="#20282E">Stage 2 · residual supervision</text>
+<g id="refinement_training">
+<text x="1519" y="766" font-family="Comic Sans MS, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle" fill="#20282E">Refinement · residual supervision</text>
 <path d="M1261 791 H1286" fill="none" stroke="#52606D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" opacity="1" stroke-dasharray="4 3"/>
 <text x="1293" y="799" font-family="Comic Sans MS, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="start" fill="#20282E">AR proposal</text>
 <path d="M1454 791 H1479" fill="none" stroke="#49785E" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>

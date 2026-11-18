@@ -1,0 +1,183 @@
+_target_: navsim.agents.drivesta.drivesta_agent.DriveSTAAgent
+config:
+
+  # Trajectory proposals and sampling
+  proposal_num: 64
+  num_poses: 8
+  long_trajectory_additional_poses: 2
+  ref_num: 4
+  scorer_ref_num: 4
+  shared_refiner: false
+  num_scene_tokens: 16
+  one_token_per_traj: true
+  full_history_status: false
+  trajectory_sampling:
+    _target_: nuplan.planning.simulation.trajectory.trajectory_sampling.TrajectorySampling
+    time_horizon: 4
+    interval_length: 0.5
+
+  # Autoregressive proposal generation
+  ar_decoder_num_layers: 1
+  ar_bicycle_dt: 0.5
+  scorer_detach_proposals: true
+  pdm_score_detach_proposals: true
+
+  # Residual diffusion refinement
+  use_diffusion_decoder: true
+  train_diffusion_decoder_only: false
+  train_scorer: true
+  diffusion_type: ddim
+  diffusion_num_layers: 12
+  diffusion_num_heads: 8
+  diffusion_d_ffn: 1024
+  diffusion_delta_scale: 1.0
+  diffusion_eval_noise_seed: 27
+  diffusion_ego_status_dim: 8
+  diffusion_use_ar_proposal_tokens: true
+
+  # Refinement joint optimization and JEPA
+  training_phase: joint
+  jepa_checkpoint: ${oc.env:JEPA_CHECKPOINT,${oc.env:DRIVESTA_BACKBONE_ROOT,${oc.env:DRIVESTA_ROOT}/weights/Backbones}/drive_jepa/vitl_merge_3dataset_e50.pt}
+  jepa_encoder_lr: 1e-5
+  jepa_weight_decay: 0.04
+  jepa_load_pretrained: true
+  jepa_predictor_lr: 1e-4
+  jepa_layer_decay: 0.9
+  jepa_ema_momentum: 0.99925
+  jepa_predictor_dim: 384
+  jepa_predictor_layers: 12
+  jepa_predictor_heads: 12
+  jepa_mask_tokens: 10
+  jepa_video_protocol: drive_jepa_expert_video8_full14_v1
+  jepa_activation_checkpointing: true
+
+  # Residual target assignment
+  wta_targets_per_parent: 4
+  pair_max_ade: 3.0
+  pair_max_fde: 6.0
+  pair_max_heading: 0.5
+  diffusion_pair_chunk: 32
+
+  # Diffusion inference schedule
+  ddim_num_train_timesteps: 1000
+  ddim_beta_schedule: scaled_linear
+  diffusion_num_inference_steps: 12
+
+  # Observation inputs
+  use_vlm_feature_cache: false
+  vlm_feature_cache_path: null
+
+  # Official PDM component weights
+  noc: 1.0
+  dac: 1.0
+  ddc: 0.0
+  ttc: 5.0
+  ep: 5.0
+  comfort: 2.0
+
+  # Transformer dimensions
+  tf_d_model: 256
+  tf_d_ffn: 1024
+  cam_f0:
+  - 2
+  - 3
+  cam_l0:
+  - 3
+  cam_l1: []
+  cam_l2: []
+  cam_r0:
+  - 3
+  cam_r1: []
+  cam_r2: []
+  cam_b0:
+  - 3
+  lidar_pc: []
+
+  # Image encoder and LoRA
+  image_size:
+  - 1148
+  - 672
+  image_backbone:
+    model_name: timm/vit_small_patch14_reg4_dinov2.lvd142m
+    model_weights: ${oc.env:DINO_WEIGHTS,${oc.env:DRIVESTA_BACKBONE_ROOT,${oc.env:DRIVESTA_ROOT}/weights/Backbones}/dinov2/model.safetensors}
+    use_lora: true
+    finetune: false
+    lora_rank: 32
+    focus_front_cam: false
+    use_feature_pooling: false
+    compress_fc: false
+
+  # Optional lidar branch
+  lidar_min_x: -35
+  lidar_max_x: 35
+  lidar_min_y: -35
+  lidar_max_y: 35
+  lidar_image_size:
+  - 518
+  - 518
+  lidar_hist_max_per_pixel: 5
+  lidar_max_height: 100.0
+  lidar_split_height: 0.2
+  lidar_use_ground_plane: true
+  lidar_backbone:
+    model_name: timm/vit_small_patch14_reg4_dinov2.lvd142m
+    model_weights: ${oc.env:DINO_WEIGHTS,${oc.env:DRIVESTA_BACKBONE_ROOT,${oc.env:DRIVESTA_ROOT}/weights/Backbones}/dinov2/model.safetensors}
+    use_lora: true
+    finetune: false
+    lora_rank: 32
+    in_chans: 2
+
+  # Scorer and refiner options
+  double_score: false
+  agent_pred: false
+  area_pred: false
+  bev_map: false
+  bev_agent: false
+  refiner_num_heads: 1
+  refiner_ls_values: 0.0
+  scorer_use_serial_vlm_context: false
+  scorer_use_mode_cross_attention: false
+  scorer_mode_cross_attn_heads: null
+
+# Training objective
+loss:
+  _target_: navsim.agents.drivesta.losses.refinement.DriveSTALoss
+  phase: ${..config.training_phase}
+  heading_weight: 0.25
+  unmatched_weight: 0.05
+  future_weight: 1.0
+  auxiliary_weight: 0.25
+  auxiliary_warmup_epochs: 2.0
+  ar_auxiliary_samples: 8
+  replay_weight: 0.25
+  total_score_weight: 0.5
+  # Pairwise ranking loss; independent of LoRA rank and distributed RANK.
+  rank_weight: 0.0
+  rank_warmup_epochs: 2.0
+  rank_top_k: 8
+  rank_gap_min: 0.005
+  rank_temperature: 0.05
+  diffusion_loss_weight: 10.0
+  diffusion_trajectory_loss_weight: 20.0
+  mask_unavailable_long_gt: false
+
+# Checkpoint initialization
+checkpoint_path: ${oc.env:DRIVESTA_ROOT}/weights/Checkpoints/base_proposal.ckpt
+checkpoint_strict_load: false
+
+# Optimizer
+lr_args:
+  name: AdamW
+  base_lr: 2e-4
+  base_batch_size: 64
+
+# Learning-rate schedule
+scheduler_args:
+  num_epochs: 40
+  dataset_size: 103263
+
+# Training runtime
+batch_size: ${dataloader.params.batch_size}
+num_gpus: 8
+progress_bar: false
+console_log_every_n_steps: 100

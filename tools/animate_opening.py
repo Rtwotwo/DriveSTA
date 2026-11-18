@@ -85,7 +85,7 @@ def hashes(path,start):
  data=json.loads(run(['ffprobe','-v','error','-select_streams','v:0','-show_packets','-show_data_hash','sha256','-show_entries','packet=pts_time,data_hash','-of','json',str(path)]))
  return [x['data_hash'] for x in data['packets'] if float(x['pts_time'])>=start-.0001]
 for kind,source in [('master',Path(a.master))]:
- tail=work/(kind+'_tail.mp4');dest=work/('drivetraj-demo-'+kind+'.mp4')
+ tail=work/(kind+'_tail.mp4');dest=work/('drivesta-demo-'+kind+'.mp4')
  run(['ffmpeg','-y','-v','error','-ss','16','-i',str(source),'-map','0:v:0','-an','-c','copy',str(tail)])
  concat([intro,tail],dest)
  assert abs(duration(dest)-321.8)<.05,(kind,duration(dest))
@@ -93,14 +93,14 @@ for kind,source in [('master',Path(a.master))]:
  run(['ffmpeg','-v','error','-i',str(dest),'-f','null','-'])
  print(json.dumps(dict(kind=kind,duration=duration(dest),bytes=dest.stat().st_size,tail_packets='identical',sha256=hashlib.sha256(dest.read_bytes()).hexdigest())),flush=True)
 # Re-encode the verified master so the web rendition has clean segment boundaries.
-web=work/'drivetraj-demo-web.mp4'
-run(['ffmpeg','-y','-v','error','-i',str(work/'drivetraj-demo-master.mp4'),'-an','-c:v','libx264','-preset','fast','-b:v','2100k','-maxrate','2600k','-bufsize','5200k','-pix_fmt','yuv420p','-threads','8','-movflags','+faststart',str(web)])
+web=work/'drivesta-demo-web.mp4'
+run(['ffmpeg','-y','-v','error','-i',str(work/'drivesta-demo-master.mp4'),'-an','-c:v','libx264','-preset','fast','-b:v','2100k','-maxrate','2600k','-bufsize','5200k','-pix_fmt','yuv420p','-threads','8','-movflags','+faststart',str(web)])
 assert abs(duration(web)-321.8)<.05
 run(['ffmpeg','-v','error','-i',str(web),'-f','null','-'])
 print(json.dumps(dict(kind='web',duration=duration(web),bytes=web.stat().st_size,source='verified master',sha256=hashlib.sha256(web.read_bytes()).hexdigest())),flush=True)
 edit=json.loads((repo/'docs/assets/data/demo-edit.json').read_text())
 edit['duration_s']=321.8
-edit['chapters']=[dict(title='DriveTraj',start=0,duration=2.4),dict(title='Teaser',start=2.4,duration=3.6),dict(title='Overview',start=6,duration=4.4)]+[dict(c,start=round(c['start']-5.6,3)) for c in edit['chapters'][2:]]
+edit['chapters']=[dict(title='DriveSTA',start=0,duration=2.4),dict(title='Teaser',start=2.4,duration=3.6),dict(title='Overview',start=6,duration=4.4)]+[dict(c,start=round(c['start']-5.6,3)) for c in edit['chapters'][2:]]
 edit['opening']='2.4 s logo, 3.6 s panel reveal, 4.4 s overview reveal with existing-link highlights; no narration or added explanations'
 edit['demo_tail_verification']='Master demo packet hashes after the opening match the previous version; web rendition is encoded from the verified master.'
 (work/'demo-edit.json').write_text(json.dumps(edit,indent=2))

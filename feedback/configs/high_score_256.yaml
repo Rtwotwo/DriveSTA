@@ -1,0 +1,52 @@
+version: high_score_256_v1
+objective: high_score_256
+base_protocol: feedback/configs/dense_dataset_v1.yaml
+manifest_directory: feedback/data/dense_gt_v1/manifests/navtrainval_v1
+output: data/mining/high_score_256
+sampling:
+  integer_lattice_m: 0.001
+  base_bounds_m:
+  - -5.0
+  - 8.0
+  - -3.0
+  - 3.0
+  hard_bounds_m:
+  - -15.0
+  - 40.0
+  - -12.0
+  - 12.0
+  max_unique_goals: 3072
+  query_budgets:
+  - 3072
+  - 8192
+  - 32768
+  adaptive_batch: 64
+  exploration_fraction: 0.25
+  local_scales_m:
+  - 0.05
+  - 0.15
+  - 0.45
+  - 1.2
+  - 3.0
+  high_pdm_raw: 0.95
+storage:
+  chunk_candidates: 64
+  retain_all_scores: true
+  format: high_score_256
+  candidates: 256
+execution:
+  workers: 128
+  scenes_per_job: 16
+  queued_jobs_per_worker: 2
+  threads_per_worker: 1
+  progress_interval_s: 30
+  minimum_free_gib: 15
+  selection_seed: 20261014
+estimate:
+  measured_workers: 128
+  measured_candidates_per_s: 2540.97267
+  throughput_source: feedback/runs/profile_density_20261014_scaling
+  uncached_scene_allowance_mib: 0.6
+  end_to_end_overhead_fraction:
+  - 0.15
+  - 0.5

@@ -1,0 +1,18 @@
+[
+  {
+    "profile": "base_proposal",
+    "numeric_parameters_unchanged": true
+  },
+  {
+    "profile": "base",
+    "numeric_parameters_unchanged": true
+  },
+  {
+    "profile": "scale_proposal",
+    "numeric_parameters_unchanged": true
+  },
+  {
+    "profile": "scale",
+    "numeric_parameters_unchanged": true
+  }
+]

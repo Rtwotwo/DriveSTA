@@ -90,7 +90,7 @@ for plan in plans:
     encode(inputs,f"[0:v][1:v][2:v]vstack=inputs=3:shortest=1,drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='{label}':fontsize=30:fontcolor=white:box=1:boxcolor=black@0.5:boxborderw=8:x=20:y=20,format=yuv420p[out]",dest,60)
     segments.append(dest);chapter_names.append(label)
     print('finished '+label,flush=True)
-movie=out/'drivetraj-demo.mp4';concat(segments,movie)
+movie=out/'drivesta-demo.mp4';concat(segments,movie)
 def stamp(t):
     n=round(t*1000);return f'{n//3600000:02}:{n//60000%60:02}:{n//1000%60:02}.{n%1000:03}'
 t=0;chapters=[]

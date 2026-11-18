@@ -1,0 +1,58 @@
+schema_version: 1
+mode: explicit_plan_and_execute
+dataset_protocol: feedback/configs/dense_dataset_v1.yaml
+manifest_directory: feedback/data/dense_gt_v1/manifests/navtrainval_v1
+dataset_root: feedback/data/dense_gt_v1
+profiles:
+  pilot:
+    splits:
+    - train
+    max_scenes: 16
+    selection_seed: 20261014
+    scene_workers: 2
+  trial:
+    splits:
+    - train
+    max_scenes: 1024
+    selection_seed: 20261014
+    scene_workers: 8
+  full:
+    splits:
+    - train
+    - val
+    max_scenes: null
+    selection_seed: 20261014
+    scene_workers: 8
+scheduler:
+  group_by:
+  - split
+  - log_name
+  max_scenes_per_job: 64
+  max_queued_jobs_per_worker: 2
+  nested_process_pools: false
+  threads_per_worker: 1
+  retry_transient_io_delays_s:
+  - 1
+  - 5
+  - 15
+  on_shared_storage_failure: stop_dispatch
+  resume_from: verified_committed_chunks
+pipeline:
+  order:
+  - manifest
+  - plan
+  - preflight
+  - generate
+  - audit
+  - pack
+  implemented:
+  - manifest
+  - plan
+  - preflight
+  - generate
+  - audit
+  - pack
+  planned:
+  - scorer_training
+  automatic_full_launch: false
+  automatic_training_launch: false

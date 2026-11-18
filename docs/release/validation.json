@@ -1,0 +1,176 @@
+{
+  "complete": true,
+  "release": "DriveSTA",
+  "date": "2026-11-18",
+  "regression_tests": 411,
+  "additional_asset_tests": 4,
+  "final_boundary_tests": 37,
+  "runtime_checks": [
+    {
+      "check": "train_config_base_proposal",
+      "returncode": 0,
+      "seconds": 17.89
+    },
+    {
+      "check": "eval_config_base_proposal",
+      "returncode": 0,
+      "seconds": 31.32
+    },
+    {
+      "check": "train_config_base",
+      "returncode": 0,
+      "seconds": 17.59
+    },
+    {
+      "check": "eval_config_base",
+      "returncode": 0,
+      "seconds": 20.41
+    },
+    {
+      "check": "train_config_scale_proposal",
+      "returncode": 0,
+      "seconds": 17.87
+    },
+    {
+      "check": "eval_config_scale_proposal",
+      "returncode": 0,
+      "seconds": 32.68
+    },
+    {
+      "check": "train_config_scale",
+      "returncode": 0,
+      "seconds": 17.39
+    },
+    {
+      "check": "eval_config_scale",
+      "returncode": 0,
+      "seconds": 20.32
+    },
+    {
+      "check": "preflight_base_proposal",
+      "returncode": 0,
+      "seconds": 79.24
+    },
+    {
+      "check": "preflight_base",
+      "returncode": 0,
+      "seconds": 133.92
+    },
+    {
+      "check": "preflight_scale_proposal",
+      "returncode": 0,
+      "seconds": 149.07
+    },
+    {
+      "check": "preflight_scale",
+      "returncode": 0,
+      "seconds": 293.2
+    },
+    {
+      "check": "inference_help",
+      "returncode": 0,
+      "seconds": 15.45
+    },
+    {
+      "check": "asset_download_plan",
+      "returncode": 0,
+      "seconds": 0.22
+    },
+    {
+      "check": "metric_cache_config",
+      "returncode": 0,
+      "seconds": 8.6
+    }
+  ],
+  "smoke_checks": [
+    {
+      "check": "pdm_base_proposal",
+      "returncode": 0,
+      "seconds": 50.64
+    },
+    {
+      "check": "pdm_base",
+      "returncode": 0,
+      "seconds": 51.96
+    },
+    {
+      "check": "single_scene_cli",
+      "returncode": 0,
+      "seconds": 38.59
+    }
+  ],
+  "model_parity": [
+    {
+      "profile": "base_proposal",
+      "strict_load": true,
+      "parameters": 41331472,
+      "trajectory_sha256": "be37e0f2c5a3528fc3580aacceacf50646fd73ad393db67acb9f0728eaad2ec8",
+      "exact_equal": {
+        "trajectory": true,
+        "proposals": true,
+        "pdm_score": true
+      },
+      "max_abs_error": {
+        "trajectory": 0.0,
+        "proposals": 0.0,
+        "pdm_score": 0.0
+      }
+    },
+    {
+      "profile": "base",
+      "strict_load": true,
+      "parameters": 700321179,
+      "trajectory_sha256": "10797604e998c32c03dc8dd846fe11284f4f41cea4958043ca61550ea83c1fa6",
+      "exact_equal": {
+        "trajectory": true,
+        "proposals": true,
+        "pdm_score": true
+      },
+      "max_abs_error": {
+        "trajectory": 0.0,
+        "proposals": 0.0,
+        "pdm_score": 0.0
+      }
+    },
+    {
+      "profile": "scale_proposal",
+      "strict_load": true,
+      "parameters": 41331472,
+      "trajectory_sha256": "6aa6aefaba1ec696092b34c09a4d37fa5db52bc60b01b54350308e1854ecedda",
+      "exact_equal": {
+        "trajectory": true,
+        "proposals": true,
+        "pdm_score": true
+      },
+      "max_abs_error": {
+        "trajectory": 0.0,
+        "proposals": 0.0,
+        "pdm_score": 0.0
+      }
+    },
+    {
+      "profile": "scale",
+      "strict_load": true,
+      "parameters": 700321179,
+      "trajectory_sha256": "fd8ca6fe30bffc08b9784f4aaa3c9e47955359f3cdd260ddd14b8166dfbeb300",
+      "exact_equal": {
+        "trajectory": true,
+        "proposals": true,
+        "pdm_score": true
+      },
+      "max_abs_error": {
+        "trajectory": 0.0,
+        "proposals": 0.0,
+        "pdm_score": 0.0
+      }
+    }
+  ],
+  "byte_identical_weight_and_archive_files": 55,
+  "wheel_build": true,
+  "full_training_rerun": false,
+  "full_benchmark_rerun": false,
+  "reference_layout": {
+    "local_commit": "91935f3e55db6a321ec44443a8caa819fd30a996",
+    "public_commit": "0f3565f66546139a0183bc5807d5f7234ae2d4b0"
+  }
+}

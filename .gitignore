@@ -7,3 +7,15 @@ node_modules/
 test-results/
 
 .local-media/
+
+# Downloaded/generated research assets
+/weights/
+/checkpoints/
+/data/
+/outputs/
+/release_manifests/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/

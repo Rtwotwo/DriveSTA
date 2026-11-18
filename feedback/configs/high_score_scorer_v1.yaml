@@ -1,0 +1,121 @@
+status: design_only
+version: high_score_scorer_v1
+purpose: compact_high_score_augmentation_for_native_candidate_selection
+data:
+  train_scenes: 85109
+  val_scenes: 18179
+  train_on_val: false
+  scorer_family: drivor
+  target_generator_family: chainflow_diffusion
+  target_generator_checkpoint: null
+  scorer_checkpoint: null
+  score_protocol: navsim_v1_official_single_candidate
+  query_budget_per_scene: 4096
+  query_budget_includes_native_and_reference: true
+  query_budget_ablations:
+  - 2048
+  - 4096
+  - 8192
+  high_score_threshold: 0.95
+  high_pool_capacity: 256
+  high_pool_capacity_ablations:
+  - 64
+  - 128
+  - 256
+  native_pool_size: 64
+  keep_original_expert_gt: true
+  empty_high_pool: use_native_without_dropping_scene
+  unselected_generated_trajectories: retain_query_keys_and_labels_for_recovery
+discovery:
+  initial_x_m:
+  - -10
+  - 20
+  initial_y_m:
+  - -8
+  - 8
+  initial_grid_m: 1.0
+  shifted_probe_offset_m:
+  - 0.5
+  - 0.5
+  round_queries: 256
+  regional_fraction: 0.75
+  unexplored_fraction: 0.25
+  regional_step_m: 0.2
+  transition_step_m: 0.1
+  sharp_boundary_step_m: 0.05
+  early_stop: proposed_requires_fixed_budget_comparison
+  minimum_additional_queries_before_early_stop: 1024
+retention:
+  score_elite: 64
+  trajectory_diversity: 128
+  threshold_band: 64
+  threshold_band_score:
+  - 0.95
+  - 0.97
+  duplicates: remove
+training:
+  trainable:
+  - pos_embed
+  - scorer_attention
+  - scorer.pred_score
+  frozen:
+  - image_backbone
+  - scene_embeds
+  - hist_encoding
+  - trajectory_decoder
+  - traj_head
+  - target_generator
+  views:
+    native:
+      native: 64
+      high: 0
+    mixed:
+      native: 48
+      high: 16
+  mixed_native_selection:
+    old_predicted_top: 16
+    uniform_remaining: 32
+  component_labels: raw_soft
+  total_score_weights:
+    NC: 1
+    DAC: 1
+    DDC: 0
+    EP: 5
+    TTC: 5
+    comfort: 2
+  total_score_denominator: 12
+  losses:
+    component_bce_weight: 1.0
+    total_smooth_l1_weight: 1.0
+    total_smooth_l1_beta: 0.02
+    pairwise_enabled_by_default: false
+    pairwise_weight: 0.1
+    pairwise_min_true_gap: 0.005
+    pairwise_temperature: 0.02
+    max_pairs_per_view: 64
+    pairwise_same_context_only: true
+  optimizer: AdamW
+  head_lr: 0.0001
+  scorer_trunk_lr: 5.0e-05
+  weight_decay: 0.0001
+  gradient_clip: 1.0
+  effective_scene_batch: 32
+  scene_passes: 5
+  warmup_fraction: 0.05
+  lr_schedule: cosine
+  development_seed: 0
+  confirmation_seeds:
+  - 0
+  - 1
+  - 2
+evaluation:
+  primary: native_pool_selected_pdms
+  secondary:
+  - native_pool_selection_regret
+  - selected_degradation
+  - subscore_error
+  - ranking_by_true_gap
+  - context_flip_rate
+  candidate_pool: fixed_across_scorers
+  statistical_unit: driving_log
+  ground_truth_used_at_inference: false

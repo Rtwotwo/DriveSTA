@@ -59,7 +59,7 @@ getJSON('assets/hugsim-selection.json').then(data=>{
     setVideo($('#hug-video'),item.video,item.poster);
     $('#hug-dataset').textContent=names[item.dataset];
     $('#hug-scene').textContent=`${item.scene} \u00b7 ${item.mode}`;
-    $('#hug-meta').textContent=`${item.duration_s.toFixed(2)} s \u00b7 DriveTraj-Scale Stage 2`;
+    $('#hug-meta').textContent=`${item.duration_s.toFixed(2)} s \u00b7 DriveSTA-Scale Refinement`;
     $('#hug-rc').textContent=item.rc.toFixed(2);$('#hug-hd').textContent=item.hd_score.toFixed(2);
     $('#hug-download').href=item.video;$('#hug-count').textContent=`${current+1} / ${items.length}`;
     const grid=$('#hug-thumbs');grid.replaceChildren();

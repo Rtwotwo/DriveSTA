@@ -22,8 +22,8 @@ nav=json.loads((SITE/'assets/data/navtest-cases.json').read_text())
 assert nav['count']==41==len(nav['cases'])
 assert len({x['token'] for x in nav['cases']})==41
 for x in nav['cases']:
- assert x['scores']['DriveTraj']>=95
- assert all(v<80 for k,v in x['scores'].items() if k!='DriveTraj')
+ assert x['scores']['DriveSTA']>=95
+ assert all(v<80 for k,v in x['scores'].items() if k!='DriveSTA')
 hug=json.loads((SITE/'assets/hugsim-selection.json').read_text())
 assert len(hug)==51 and len({x['dataset'] for x in hug})==4
 assert {x['difficulty'] for x in hug}=={'easy','medium','hard','extreme'}

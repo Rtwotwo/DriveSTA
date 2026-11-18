@@ -1,0 +1,183 @@
+{
+  "source_root": "/data/xinyao/navsim_workspace/chainflow/clones/navsim_v2_eval",
+  "changes": "Namespace navsim -> navsim.v2; scoped pickle class remapping. Scoring formulas unchanged.",
+  "files": [
+    {
+      "source": "navsim/traffic_agents_policies/log_replay_traffic_agents.py",
+      "destination": "navsim/v2/traffic_agents_policies/log_replay_traffic_agents.py",
+      "source_sha256": "d9e18514f1d2e0da2d8f9933a9fce03a25210301bbdb7b5d4da34f65d7d003b9",
+      "copied_sha256": "d54ebb2ec4700ac7f4ba64a49bec04ca04a8fd57b1ebc35d7f384a27c5ae3a4f"
+    },
+    {
+      "source": "navsim/traffic_agents_policies/abstract_traffic_agents_policy.py",
+      "destination": "navsim/v2/traffic_agents_policies/abstract_traffic_agents_policy.py",
+      "source_sha256": "4527ac68189fd0d4bb9e5ee6cdeca625653a6c5420f5db7bdb53a5ff27fd8966",
+      "copied_sha256": "54fddb834d5d743e84b0c104730c6ea93d697b23acd88694f2e65bf1b126f525"
+    },
+    {
+      "source": "navsim/planning/metric_caching/metric_cache.py",
+      "destination": "navsim/v2/planning/metric_caching/metric_cache.py",
+      "source_sha256": "b994b5c9221c0796c3c511f5c339102fc1b720a48be08a5d7aaa0ad2108b7185",
+      "copied_sha256": "3294fac0e92998a2df17b47f957448972c71af06a83672517586350384970496"
+    },
+    {
+      "source": "navsim/planning/simulation/planner/pdm_planner/utils/pdm_path.py",
+      "destination": "navsim/v2/planning/simulation/planner/pdm_planner/utils/pdm_path.py",
+      "source_sha256": "d417c641db6750174adbf321dbe3019a01237121b38c9f16fd5b3a9e52789e1d",
+      "copied_sha256": "c5f9bb559c0c9e335da50b77b3c0cdda66d4578e328697add5a44ecf3f628d8d"
+    },
+    {
+      "source": "navsim/planning/simulation/planner/pdm_planner/utils/pdm_geometry_utils.py",
+      "destination": "navsim/v2/planning/simulation/planner/pdm_planner/utils/pdm_geometry_utils.py",
+      "source_sha256": "84ff47a6ef3346b7c89f7cd5580e82a2dfcc1c1bf922bf6227e398e8ba2c1354",
+      "copied_sha256": "fd0e4c5ba55e1239535421d08fa9416748227c429454d1bb5e2b8a08a38bf289"
+    },
+    {
+      "source": "navsim/planning/simulation/planner/pdm_planner/utils/pdm_enums.py",
+      "destination": "navsim/v2/planning/simulation/planner/pdm_planner/utils/pdm_enums.py",
+      "source_sha256": "3e10ea50b1a2cecd7d310d842c76b606ea98d8e2070d43c4fe9db162b5f234b0",
+      "copied_sha256": "37f427e4e9e1ad5ea47b91ccadb8b5def401649e51ea83f65250af77c34514d5"
+    },
+    {
+      "source": "navsim/planning/simulation/planner/pdm_planner/utils/pdm_array_representation.py",
+      "destination": "navsim/v2/planning/simulation/planner/pdm_planner/utils/pdm_array_representation.py",
+      "source_sha256": "0104cd2c291a3fb67630d8670b19cf8d2e01d79ca788f55f9b12264f2c2b4e3c",
+      "copied_sha256": "8d6a44fb9fb1ca44a4f7d28e323ab73ce089ee7f81f8af5bbfa3bb39a58be415"
+    },
+    {
+      "source": "navsim/planning/simulation/planner/pdm_planner/observation/pdm_occupancy_map.py",
+      "destination": "navsim/v2/planning/simulation/planner/pdm_planner/observation/pdm_occupancy_map.py",
+      "source_sha256": "19746b885186b363a964ca8b51ba3591ae7f8c68744df24824e7bdc744b591d3",
+      "copied_sha256": "da8705e561e72cd6826c863ba5a0f168662ab8f2b71d2f92bdca6683bac5efec"
+    },
+    {
+      "source": "navsim/planning/simulation/planner/pdm_planner/observation/pdm_observation.py",
+      "destination": "navsim/v2/planning/simulation/planner/pdm_planner/observation/pdm_observation.py",
+      "source_sha256": "83cac2d3e9b77bbf8c67bb62f2f0b29fdc35a2c095a1cf18140a7f7308a085ba",
+      "copied_sha256": "9c84fb47e779c2f62f0cc0469cb537c559c30e94b69ecea6f5c2431e0dc21b35"
+    },
+    {
+      "source": "navsim/planning/simulation/planner/pdm_planner/observation/pdm_object_manager.py",
+      "destination": "navsim/v2/planning/simulation/planner/pdm_planner/observation/pdm_object_manager.py",
+      "source_sha256": "1723894418d5b9ea00683b4b52f900b51c1da0c97a7ae46914fe0092e1e66dab",
+      "copied_sha256": "1421cc6bb9e03ce82b7260f726acf4cbbcc5dcbafe375e7620bbf0173bba4d2f"
+    },
+    {
+      "source": "navsim/common/enums.py",
+      "destination": "navsim/v2/common/enums.py",
+      "source_sha256": "dd4921ed0f1a8a1b1460dff459192a22f811592d9b18d9f05af315e63bb66351",
+      "copied_sha256": "e704a09946f570e350b47af3e2b530b7cc3a6548a49ce677532ac21558b0a061"
+    },
+    {
+      "source": "navsim/common/dataclasses.py",
+      "destination": "navsim/v2/common/dataclasses.py",
+      "source_sha256": "a218e135033f8963317f647bd3f0433f723e8f34dc2dcc34cfa8d6f8788415c1",
+      "copied_sha256": "7e3aec29f218b540af9151cc70e119b0c868d673680b4adca16a60ada7bd7185"
+    },
+    {
+      "source": "navsim/traffic_agents_policies/navsim_IDM_traffic_agents.py",
+      "destination": "navsim/v2/traffic_agents_policies/navsim_IDM_traffic_agents.py",
+      "source_sha256": "77f9063f5155b25781dcd479f3f128ae681ff2af302c5b548c1c177c559b68aa",
+      "copied_sha256": "d3feff02485fff89f77e428c2f2d44e4c98370254a41cb7cfeeaf35c1c04bb78"
+    },
+    {
+      "source": "navsim/planning/simulation/observation/navsim_idm_agents.py",
+      "destination": "navsim/v2/planning/simulation/observation/navsim_idm_agents.py",
+      "source_sha256": "b5de798df8d2b43006e4601129320eea66dbfd8ad8024cce5837b082ae3ded67",
+      "copied_sha256": "56c5da91857e15265ca15d999b330b49570f7ec38e7990bbb0c5d49e8e8b627b"
+    },
+    {
+      "source": "navsim/planning/simulation/observation/navsim_idm/navsim_idm_agents_builder.py",
+      "destination": "navsim/v2/planning/simulation/observation/navsim_idm/navsim_idm_agents_builder.py",
+      "source_sha256": "7f418ea0e5dc67fbef85f064072738e6bd2c8cd2c389a0bcb994f1aa55e7d1b3",
+      "copied_sha256": "0110eab77486642af384ab2d67c531a75760c5b8d461a13c689555c964a2854b"
+    },
+    {
+      "source": "navsim/planning/simulation/observation/navsim_idm/navsim_idm_agent_manager.py",
+      "destination": "navsim/v2/planning/simulation/observation/navsim_idm/navsim_idm_agent_manager.py",
+      "source_sha256": "d32671dd1f7610f2008d788a47cbe19b920252736c6bdf6fb8587374db5fc7a2",
+      "copied_sha256": "79aea44b020573574e79d25afd4e4fc710b53138c4298d75808f260319e2d87a"
+    },
+    {
+      "source": "navsim/planning/simulation/planner/pdm_planner/scoring/scene_aggregator.py",
+      "destination": "navsim/v2/planning/simulation/planner/pdm_planner/scoring/scene_aggregator.py",
+      "source_sha256": "13dec362355a41c4a6e7386301efe05bcb6774a598a79026cf371ebdd3bc8e65",
+      "copied_sha256": "e48f17d41c35c4fc597a508fd894057be42a296c1b378f1d51a95d3a7bacc7fa"
+    },
+    {
+      "source": "navsim/planning/simulation/planner/pdm_planner/scoring/pdm_comfort_metrics.py",
+      "destination": "navsim/v2/planning/simulation/planner/pdm_planner/scoring/pdm_comfort_metrics.py",
+      "source_sha256": "883b606cc5f98285bd6ff917e9a4129c608b709d58fe6c2435f6b7bd27c2e6ce",
+      "copied_sha256": "91496cb27a2206a6d03a8ce960234dc4852f7d3dc11f333f9398d56abde4b2a9"
+    },
+    {
+      "source": "navsim/evaluate/pdm_score.py",
+      "destination": "navsim/v2/evaluate/pdm_score.py",
+      "source_sha256": "066ff166f8cd9de69499f522d78b9d82207c1ce0daf36bd4d0870ad9439e4b1a",
+      "copied_sha256": "fb313bba2ebdea08832b51bac222f3485583e8efd065660a9920d2b8a5938828"
+    },
+    {
+      "source": "navsim/planning/simulation/planner/pdm_planner/simulation/pdm_simulator.py",
+      "destination": "navsim/v2/planning/simulation/planner/pdm_planner/simulation/pdm_simulator.py",
+      "source_sha256": "30efc69ffc36409a496c84f560ba7201727c5e87c6a13d3f7a8e79f19ab6df4a",
+      "copied_sha256": "95b33d9a2010b5de9955c0ef6075a3c406c84a8652ce539d66f720a7f38ffc70"
+    },
+    {
+      "source": "navsim/planning/simulation/planner/pdm_planner/simulation/batch_lqr.py",
+      "destination": "navsim/v2/planning/simulation/planner/pdm_planner/simulation/batch_lqr.py",
+      "source_sha256": "dbfc4b883e9b3358d58b7c5ee7413d90032a1397b62eb49730cf6bc4858721ce",
+      "copied_sha256": "fd15f4299a8a6ca7c19b16565f8e39c909c034c83c6128ae6957e1e9d75c8c27"
+    },
+    {
+      "source": "navsim/planning/simulation/planner/pdm_planner/simulation/batch_lqr_utils.py",
+      "destination": "navsim/v2/planning/simulation/planner/pdm_planner/simulation/batch_lqr_utils.py",
+      "source_sha256": "80d7e1e51adcf0167bbd3c81244c1c84951794a092fdf47384632debce39ebf1",
+      "copied_sha256": "1f5dc1080bb0a276934b9911f6e6b64751a615d7832aded2679869e71d565939"
+    },
+    {
+      "source": "navsim/planning/simulation/planner/pdm_planner/simulation/batch_kinematic_bicycle.py",
+      "destination": "navsim/v2/planning/simulation/planner/pdm_planner/simulation/batch_kinematic_bicycle.py",
+      "source_sha256": "396d2fe7edd9b660cbbdceee51f940d692b4336616baaaecef92f53afed3694e",
+      "copied_sha256": "b76fc0830700c6c6d29f06fcbf2612cbf974d9ee4304510334d4e54c57e4a2ed"
+    },
+    {
+      "source": "navsim/planning/simulation/planner/pdm_planner/scoring/pdm_scorer.py",
+      "destination": "navsim/v2/planning/simulation/planner/pdm_planner/scoring/pdm_scorer.py",
+      "source_sha256": "9ed5527bace1a272c869a26ed714dcddceced16219d8e2859f45503d3cf032eb",
+      "copied_sha256": "f3eeb5646692714f16b30beee589d9e44699096f99a08f469d588f9dc7c936a0"
+    },
+    {
+      "source": "navsim/planning/simulation/planner/pdm_planner/scoring/pdm_scorer_utils.py",
+      "destination": "navsim/v2/planning/simulation/planner/pdm_planner/scoring/pdm_scorer_utils.py",
+      "source_sha256": "708628b15d9ad8195d005b221b4eec54c32cb20d64fccf56aeec4969fe36dc13",
+      "copied_sha256": "d987d326d8f4911d73d60e91526ec69afab54903e931ec8569bae29a1e0f2a84"
+    },
+    {
+      "source": "navsim/common/dataloader.py",
+      "destination": "navsim/v2/common/dataloader.py",
+      "source_sha256": "f686c2a13b8890a13fc1d8c9250bda150bf66428c46e154fbc217d09a333fe9d",
+      "copied_sha256": "fe8bccef22767b52249c9ec47d7f658aa1635b5c35587c2959b9c1d2e2f2eb3a"
+    },
+    {
+      "source": "navsim/planning/script/run_pdm_score_one_stage.py",
+      "destination": "navsim/evaluate/epdms/one_stage.py",
+      "functions": [
+        "infer_start_adjacent_mapping",
+        "create_scene_aggregators",
+        "compute_final_scores"
+      ],
+      "source_sha256": "0551eac079e1aa468f959648b09a3051064fae02767fa06d34c5a0240cdf612e"
+    },
+    {
+      "source": "navsim/planning/script/run_pdm_score_from_submission.py",
+      "destination": "navsim/evaluate/epdms/two_stage.py",
+      "functions": [
+        "create_scene_aggregators",
+        "compute_final_scores",
+        "calculate_weighted_average_score",
+        "calculate_individual_mapping_scores"
+      ],
+      "source_sha256": "ac31bffd9bb9b9d6a7156e8f0f2686d0aff0a9759753a9772221d4ceb7d44e0c"
+    }
+  ]
+}

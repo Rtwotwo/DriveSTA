@@ -1,0 +1,134 @@
+status: batch_implemented
+dataset_version: dense_gt_v1_development
+branch: codex/drivesta-feedback-training
+scene_scope:
+  metadata: data/navsim_cache/train_metric_cache/metadata/train_metric_cache_metadata_node_0.csv
+  log_partition: navsim/planning/script/config/training/default_train_val_test_log_split.yaml
+  metric_cache_root: data/navsim_cache/train_metric_cache
+  log_root: data/navsim_logs/trainval
+  official_cache_root: data/navsim_cache/official_metric_cache_v1
+  expected_total: 103288
+  expected_train: 85109
+  expected_val: 18179
+  include_val_logs_in_train: false
+  allow_test_scenes: false
+constructor:
+  function: navsim.tools.trajectory_mining.path_endpoint_surface._build_warp
+  reference: expert_gt
+  parents_per_goal: 1
+  factor: 1.0
+  goal_shrink: false
+  num_poses: 8
+  interval_s: 0.5
+  coordinate_frame: current_ego_x_forward_y_left
+  max_planned_endpoint_error_m: 3.0e-05
+sampling:
+  integer_lattice_m: 0.05
+  base_dense_x_m:
+  - -5.0
+  - 5.0
+  base_dense_y_m:
+  - -2.0
+  - 2.0
+  initial_x_m:
+  - -10.0
+  - 20.0
+  initial_y_m:
+  - -8.0
+  - 8.0
+  coarse_m: 0.5
+  offset_probe_m:
+  - 0.25
+  - 0.25
+  dense_m: 0.1
+  boundary_m: 0.05
+  high_pdm_raw: 0.95
+  component_jump_raw: 0.05
+  high_buffer_m: 1.1
+  transition_buffer_m: 0.5
+  no_high_fallback: top_ten_percent_positive_scores
+  fallback_count: ceil_positive_count_times_0p1
+  fallback_scope: dense_refinement_only
+  fallback_tie_order: score_desc_then_integer_goal_key
+  all_zero_fallback: base_dense_and_component_transitions
+  empty_seed_distance: infinity
+  expansion_x_m: 5.0
+  expansion_y_m: 2.0
+  max_expansion_rounds: 4
+  hard_x_m:
+  - -15.0
+  - 40.0
+  hard_y_m:
+  - -12.0
+  - 12.0
+  max_unique_goals: 80000
+  phase_priority:
+  - base_dense
+  - initial_coarse
+  - offset_probes
+  - expansion
+  - dense_refinement
+  - boundary_refinement
+  within_phase_order: integer_goal_key_lexicographic
+  budget_overflow: schedule_remaining_then_mark_candidate_cap
+  revisit_open_high_boundaries: true
+labeling:
+  protocol: navsim_v1_official_single_candidate
+  function: navsim.evaluate.pdm_score.pdm_score
+  audit_function: navsim.evaluate.pdm_score.pdm_score_with_details
+  simulator_poses: 40
+  simulator_interval_s: 0.1
+  evaluation_group: reference_plus_one_candidate
+  retain_valid_zero_scores: true
+  keep_raw_half_labels: true
+  score_unit: raw_0_to_1
+  component_names:
+  - no_at_fault_collisions
+  - drivable_area_compliance
+  - ego_progress
+  - time_to_collision_within_bound
+  - comfort
+  - driving_direction_compliance
+  float64_parity_tolerance: 1.0e-09
+  float32_storage_tolerance: 1.0e-06
+storage:
+  output_root: feedback/data/dense_gt_v1
+  chunk_candidates: 1024
+  trajectory_dtype: float32
+  labels_dtype: float32
+  recovery_labels_dtype: float64
+  save_all_simulated_states: false
+  audit_rollouts:
+  - expert_gt
+  - zero_offset
+  - score_min
+  - score_max
+  - boundary
+  - deterministic_random
+  commit: same_filesystem_temporary_fsync_validate_atomic_rename
+  resume: committed_chunks_and_sampling_state
+  target_training_shard_mib: 1024
+execution:
+  parallel_unit: scene
+  scene_workers: 8
+  candidate_worker_pool: false
+  threads_per_worker: 1
+  max_queued_scenes_per_worker: 2
+  transient_io_retry_delays_s:
+  - 1
+  - 5
+  - 15
+  shared_storage_failure: stop_dispatch_and_preserve_committed_chunks
+  launch_full_generation: false
+training:
+  first_adapter: drivor_scorer_only
+  freeze_generator: true
+  freeze_shared_encoder: true
+  scene_sampling: uniform
+  candidate_sampling: uniform_first
+  candidate_bank_size: 64
+  require_bank_size_matches_checkpoint: true
+  label_transform: raw_soft
+  loss: six_component_bce
+  online_pdm_calls: false
+  launch_training: false

@@ -1,0 +1,50 @@
+[
+  {
+    "profile": "base_proposal",
+    "agent": "navsim.agents.drivesta.drivesta_agent.DriveSTAAgent",
+    "rank": 0.0,
+    "mask": false,
+    "scenes": 103263,
+    "epochs": 25,
+    "batch": 6,
+    "gpus": 8,
+    "seed": 2,
+    "lora_rank": 32
+  },
+  {
+    "profile": "base",
+    "agent": "navsim.agents.drivesta.drivesta_agent.DriveSTAAgent",
+    "rank": 0.0,
+    "mask": false,
+    "scenes": 103263,
+    "epochs": 40,
+    "batch": 6,
+    "gpus": 8,
+    "seed": 2,
+    "lora_rank": 32
+  },
+  {
+    "profile": "scale_proposal",
+    "agent": "navsim.agents.drivesta.drivesta_agent.DriveSTAAgent",
+    "rank": 0.05,
+    "mask": true,
+    "scenes": 232672,
+    "epochs": 25,
+    "batch": 6,
+    "gpus": 8,
+    "seed": 2,
+    "lora_rank": 32
+  },
+  {
+    "profile": "scale",
+    "agent": "navsim.agents.drivesta.drivesta_agent.DriveSTAAgent",
+    "rank": 0.05,
+    "mask": true,
+    "scenes": 232672,
+    "epochs": 40,
+    "batch": 6,
+    "gpus": 8,
+    "seed": 2,
+    "lora_rank": 32
+  }
+]

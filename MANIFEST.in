@@ -1,0 +1,2 @@
+recursive-include navsim *.yaml *.json LICENSE
+recursive-include feedback/configs *.yaml

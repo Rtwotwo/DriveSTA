@@ -1,0 +1,49 @@
+{
+  "commit": "548bb8215e3aae18e162a0f12f1ba83b4d3eb57e",
+  "files": [
+    {
+      "path": "navsim_v1/vjepa2/src/models/predictor.py",
+      "url": "https://raw.githubusercontent.com/linhanwang/Drive-JEPA/548bb8215e3aae18e162a0f12f1ba83b4d3eb57e/navsim_v1/vjepa2/src/models/predictor.py",
+      "sha256": "a9a77d1d06e6c858329be169e881c07bcc238594ff63cd56dafdc13bfbb5c7fb",
+      "file": "navsim_v1__vjepa2__src__models__predictor.py"
+    },
+    {
+      "path": "navsim_v1/vjepa2/src/masks/multiseq_multiblock3d.py",
+      "url": "https://raw.githubusercontent.com/linhanwang/Drive-JEPA/548bb8215e3aae18e162a0f12f1ba83b4d3eb57e/navsim_v1/vjepa2/src/masks/multiseq_multiblock3d.py",
+      "sha256": "17a27c016b0e92143806c61495d66c1bc705c5bc9f946f40c1781700969b9c95",
+      "file": "navsim_v1__vjepa2__src__masks__multiseq_multiblock3d.py"
+    },
+    {
+      "path": "navsim_v1/vjepa2/app/vjepa/train.py",
+      "url": "https://raw.githubusercontent.com/linhanwang/Drive-JEPA/548bb8215e3aae18e162a0f12f1ba83b4d3eb57e/navsim_v1/vjepa2/app/vjepa/train.py",
+      "sha256": "6524e8efcf0483086f93cc213edea784012e53d57c7d7a1faf6fb14a0384d8c2",
+      "file": "navsim_v1__vjepa2__app__vjepa__train.py"
+    },
+    {
+      "path": "navsim_v1/vjepa2/app/vjepa/utils.py",
+      "url": "https://raw.githubusercontent.com/linhanwang/Drive-JEPA/548bb8215e3aae18e162a0f12f1ba83b4d3eb57e/navsim_v1/vjepa2/app/vjepa/utils.py",
+      "sha256": "26021ea1be639188cdaa7c0919e868a77c4ad385c951def096cbb98e6a075a29",
+      "file": "navsim_v1__vjepa2__app__vjepa__utils.py"
+    },
+    {
+      "path": "navsim_v1/vjepa2/configs/train/vitl16/pretrain-256px-16f.yaml",
+      "url": "https://raw.githubusercontent.com/linhanwang/Drive-JEPA/548bb8215e3aae18e162a0f12f1ba83b4d3eb57e/navsim_v1/vjepa2/configs/train/vitl16/pretrain-256px-16f.yaml",
+      "sha256": "45d3528ae0e0b08a2da40a54958eff4ecd86321f58cde26d93d84faf9799b48b",
+      "file": "navsim_v1__vjepa2__configs__train__vitl16__pretrain-256px-16f.yaml"
+    },
+    {
+      "path": "navsim_v1/vjepa2/src/models/vision_transformer.py",
+      "url": "https://raw.githubusercontent.com/linhanwang/Drive-JEPA/548bb8215e3aae18e162a0f12f1ba83b4d3eb57e/navsim_v1/vjepa2/src/models/vision_transformer.py",
+      "sha256": "f740a0d1f515688224ba65ad53108565b3499b1a8345f107ab8057d252d694b0",
+      "file": "navsim_v1__vjepa2__src__models__vision_transformer.py"
+    }
+  ],
+  "adaptations": [
+    "Package-local imports only.",
+    "Predictor Block forwards explicit T/H/W for rectangular tokens; parameters unchanged.",
+    "8 frames at2Hz and512x256 from paper, not the generic16-frame square config.",
+    "Preprocessing retains existing V2 deterministic front crop/resize; no random-resize augmentation.",
+    "Mask RNG seeded from valid batch token/epoch keys for resumption; original block sampling and batch truncation retained.",
+    "Smaller finetuning LR than large-batch pretraining. All planning gradients stopped at JEPA output."
+  ]
+}

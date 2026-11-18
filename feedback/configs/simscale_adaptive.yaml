@@ -1,0 +1,38 @@
+version: 4
+scoring_protocol: navsim_v1_full_ttc_actor_tail_v1
+actor_tail:
+  version: actor_tail_v1
+audit_singletons: 3
+output: data/mining/simscale_adaptive
+filter_root: navsim/planning/script/config/common/train_test_split_synthetic/scene_filter
+source_counts:
+- 33000
+- 55471
+- 46261
+- 37897
+- 32202
+full_count: 3072
+high_count: 256
+score_batch: 64
+max_queries: 6144
+max_proposals: 65536
+policy:
+  min_pdm: 0.95
+  max_targets: 256
+  max_track_queries: 6144
+  min_ade_m: 0.0
+  max_speed_mps: 25.0
+  max_accel_mps2: 6.0
+  max_jerk_mps3: 10.0
+  max_yaw_rate_rps: 1.0
+  max_lateral_accel_mps2: 4.0
+  min_signed_speed_mps: -0.02
+  max_heading_motion_error_rad: 0.35
+  moving_speed_mps: 1.0
+  max_initial_velocity_error_mps: 2.0
+  max_tracking_ade_m: 1.0
+  max_tracking_error_m: 2.0
+  max_tracking_heading_error_rad: 0.35
+  check_planned_space: true
+  max_backward_distance_m: 0.01
+adaptive_sampling: true

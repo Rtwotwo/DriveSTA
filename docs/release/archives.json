@@ -1,0 +1,952 @@
+{
+  "format": "drivesta_release_v3",
+  "complete": true,
+  "completed_utc": "2026-11-15T06:25:58.026278+00:00",
+  "archive_count": 49,
+  "trajectory_archive_count": 48,
+  "trajectory_scenes": 308119,
+  "epdms_trajectory_data_included": false,
+  "weights_contains_archives_only": false,
+  "total_compressed_bytes": 145316897952,
+  "total_source_bytes": 293993184720,
+  "datasets": {
+    "navtrainval": {
+      "scenes": 103288,
+      "archives": 16,
+      "compressed_bytes": 34664381161,
+      "source_bytes": 59774720552
+    },
+    "simscale": {
+      "scenes": 204831,
+      "archives": 32,
+      "compressed_bytes": 110363588352,
+      "source_bytes": 230716799533
+    }
+  },
+  "archives": [
+    {
+      "archive": "drivesta_metadata.tar.gz",
+      "archive_sha256": "c30b3c523a0d5cfab49216e02e83bf971805b122ce76875ace2f3dc77cf41f9d",
+      "bytes": 288928439,
+      "files": 48,
+      "source_bytes": 3501664635,
+      "verified": "all member SHA256 + gzip CRC",
+      "members": [
+        {
+          "path": "data/trajectories/navtrainval/BACKFILL_COMPLETE.json",
+          "size": 648,
+          "sha256": "fcfba72ec9fcc2b8d76743c990d1e07be5d7cb88e47a0c8a96d76031f84d5754"
+        },
+        {
+          "path": "data/trajectories/navtrainval/PARTIAL.json",
+          "size": 6722,
+          "sha256": "32bbf0eb49369ce6a3d4d504da3e7f7871788d12f79e9961888740905b86230c"
+        },
+        {
+          "path": "data/trajectories/navtrainval/backfill_execution.json",
+          "size": 9135,
+          "sha256": "5def28311faa282ac0e5b18ed78df9575c516a7d56381f4f2be4fd0da11b7950"
+        },
+        {
+          "path": "data/trajectories/navtrainval/backfill_inventory.json",
+          "size": 5052160,
+          "sha256": "8441e3c63deb57349a021538cdf0425fdf8a2cb79fca41a009220c79cf316442"
+        },
+        {
+          "path": "data/trajectories/navtrainval/backfill_pending_tokens.txt",
+          "size": 913648,
+          "sha256": "a69de56014ef30736945dab3a4ac47e6e48e23c6fae409e8ccd600f888c77c88"
+        },
+        {
+          "path": "data/trajectories/navtrainval/backfill_recovery.json",
+          "size": 235,
+          "sha256": "05dc08e733f917c997fd9a70ee3da78e2e1062d1fe44d77a1cb535cab5d9b361"
+        },
+        {
+          "path": "data/trajectories/navtrainval/backfill_status.json",
+          "size": 630,
+          "sha256": "83c8adf167b89c8516ddd670f4a06e95e9d4a5f68f6ab08a7d53961b01a67075"
+        },
+        {
+          "path": "data/trajectories/navtrainval/estimate.json",
+          "size": 781,
+          "sha256": "cf7d524498bdfdf9af0eea1e7291a223ed879a2c54c34cbf4b892e93a10aa5f5"
+        },
+        {
+          "path": "data/trajectories/navtrainval/execution.json",
+          "size": 8664,
+          "sha256": "63150d34f66ab5bb5e0dd3bfd5763709bb6fb748059d316b054f8162164f0df0"
+        },
+        {
+          "path": "data/trajectories/navtrainval/followup.json",
+          "size": 204,
+          "sha256": "1984931a6e125731431d1f16b616fa3a407ccd62332505abeecc02ef0a2c8dab"
+        },
+        {
+          "path": "data/trajectories/navtrainval/original_shortfall690_tokens.txt",
+          "size": 11730,
+          "sha256": "507f1fd8c6255c73e4f0636ae5e1ad3dbc48a8fe86d926e00ed4066f5db0fe42"
+        },
+        {
+          "path": "data/trajectories/navtrainval/recovery.json",
+          "size": 197,
+          "sha256": "57d3409f16fc1223e945d5368deb354c925f0fb18cf799b72a68cf8690988a1e"
+        },
+        {
+          "path": "data/trajectories/navtrainval/remaining_shortfall_tokens.txt",
+          "size": 425,
+          "sha256": "8e73bbbe8d6173fc4e1e890dad448b0218980c3ead08e5567546ed857ed54f25"
+        },
+        {
+          "path": "data/trajectories/navtrainval/retention_upgrade.json",
+          "size": 13777,
+          "sha256": "1fa1072deaa3891ca2bf6af51a25e83d3e7a20589615c25996bfbc62d78571c6"
+        },
+        {
+          "path": "data/trajectories/navtrainval/run.json",
+          "size": 6377,
+          "sha256": "534bf7b95dd50e103db88706aa0955f713215eee79088febfa47388c23fb99ab"
+        },
+        {
+          "path": "data/trajectories/navtrainval/scenes.jsonl",
+          "size": 24856050,
+          "sha256": "85202a7e22fb991ae9453e4d064729f7e123243935cf6e83a05b1fbd4336a959"
+        },
+        {
+          "path": "data/trajectories/navtrainval/status.json",
+          "size": 467,
+          "sha256": "e14c45d91d16e60c9c887d8a7969ec86068810cace9efb3aec743ce34415f904"
+        },
+        {
+          "path": "data/trajectories/simscale/PARTIAL.json",
+          "size": 1000,
+          "sha256": "8f4684ac1007ed1bc2a8f4346034d8bf6cb7d27a914fae8af89713e69929afd3"
+        },
+        {
+          "path": "data/trajectories/simscale/run.json",
+          "size": 3429,
+          "sha256": "dc1be4e939d242f06eaa0597f858d8d84b85758a7c8c51116b423650467ad0cf"
+        },
+        {
+          "path": "data/trajectories/simscale/scenes.jsonl",
+          "size": 129248361,
+          "sha256": "42ff4eaac16e9c1427509603364bfad6112fc8d4c7dcabf84fc9c39eff593ecf"
+        },
+        {
+          "path": "data/trajectories/simscale/shortfall_tokens.txt",
+          "size": 178794,
+          "sha256": "d1af1a34fa7619803c90460e0b765a2b68246b7543328e00e8eb47c19bdccdaa"
+        },
+        {
+          "path": "data/trajectories/simscale/status.json",
+          "size": 981,
+          "sha256": "b9900e5d4fda52c3878851b4bccd54c2f09ac65ac29922a1a2593adc9a8161d1"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/20261022_8514/SHA256SUMS.json",
+          "size": 1375,
+          "sha256": "979241b2553eb176a1c18542dd712ae50927104ec01b31dd424b003e90f7c31a"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/20261022_8514/publication_errors.json",
+          "size": 2,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/20261022_8514/shortfall_tokens.txt",
+          "size": 178794,
+          "sha256": "d1af1a34fa7619803c90460e0b765a2b68246b7543328e00e8eb47c19bdccdaa"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/20261022_8514/simscale134k_all_tokens.txt",
+          "size": 2829372,
+          "sha256": "f92c9c8a2784fa588cbce277483e9cc0d4eee90f8328892851701cb4c866e64b"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/20261022_8514/simscale134k_excluded_tokens.txt",
+          "size": 111783,
+          "sha256": "1d2f6192cd78623277c75982d07d3b64aab313df990bf66b63178dd9d686fc81"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/20261022_8514/simscale134k_train.jsonl",
+          "size": 56939960,
+          "sha256": "288f219cbe2f9ea34c4e43ab88a13f4450fc6e10d25c1564cf7970d081bb8bca"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/20261022_8514/simscale134k_train_tokens.txt",
+          "size": 2717589,
+          "sha256": "d5822d8dc4ac96cdea1506f2e987de154b9715667176f45909d17d327b884d96"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/20261022_8514/simscale205k_all_tokens.txt",
+          "size": 4301451,
+          "sha256": "c7fd81e44023310477e02d2abc47f8ec6511ebc5b506686bad7a1d9b21b4d29b"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/20261022_8514/simscale205k_excluded_tokens.txt",
+          "size": 178794,
+          "sha256": "3e37890b77325d8377485439904844ffbda18384dde4cab80ea06039db43af8f"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/20261022_8514/simscale205k_train.jsonl",
+          "size": 86379480,
+          "sha256": "ea2c04aff51231027e2fa270c13994891c67e3af0658b0cd66a0693cb9f1d898"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/20261022_8514/simscale205k_train_tokens.txt",
+          "size": 4122657,
+          "sha256": "2cd6ae1e7991e8d0afd5581639bb25c7a57bb7c7d4680c0e1e233bacf1ab5fc4"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/20261022_8514/summary.json",
+          "size": 4281,
+          "sha256": "b4138631730a3db0fd57debc3c7193c2ba1fff123eaed83327863202c0e73983"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/20261022_8514/training_sizes.json",
+          "size": 455,
+          "sha256": "6212a78d26b60ab6fb28ed989a6c08d9e05116ff004635c9783324216e5c6d8a"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/20261022_8514/verification.json",
+          "size": 4034,
+          "sha256": "378daafbfab67866a188c5a61f3ce31b4067234b752e75f87dcbbaf1abc539f0"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/joint_v1/COMPLETE.json",
+          "size": 361,
+          "sha256": "4182d6ae30c6ef9923f8c747068edde5ceae664b3537415d46213563d84ca2b3"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/joint_v1/dependency_audit.jsonl",
+          "size": 106356668,
+          "sha256": "9d1df1fa5b078ea43ef2d231faee944609ef28a4d82e876263c8ffb2e42d1992"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/joint_v1/errors.json",
+          "size": 2,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/joint_v1/excluded_tokens.txt",
+          "size": 179219,
+          "sha256": "ecd8f526530cfa5c3bb657ba17a820024f5c1857246fccd367a1572a579bc0bc"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/joint_v1/simscale134k.json",
+          "size": 1210,
+          "sha256": "4249eef90774a68ee47bdca6ff1764a6c515069becb210e83bf8cae3a5f5c7e3"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/joint_v1/simscale205k.json",
+          "size": 1224,
+          "sha256": "c8080c10409b7086a9e22083b3d6fc71354553c1745805d92583d81adb228ad8"
+        },
+        {
+          "path": "data/trajectories/simscale/training_splits/joint_v1/simscale_qualified.jsonl",
+          "size": 519327118,
+          "sha256": "580e9152f1172447f54ee1588fe03d37e7bb761aa58a531bb2bbce66f387ed6c"
+        },
+        {
+          "path": "data/indexes/research/chainflow_feedback_v2/targets32/index.json",
+          "size": 138138545,
+          "sha256": "e8502ae77b3fc6f52756e38ca6b8542217d437426447264fc15fff52f28f0bc2"
+        },
+        {
+          "path": "data/indexes/research/chainflow_feedback_v2_scaled237k/data_index.json",
+          "size": 1399,
+          "sha256": "2fc5ca12d2df89df4e8f8338eca037f8a4d9b9f6b9d52fa4c76d78f4e5a3ea5b"
+        },
+        {
+          "path": "data/indexes/research/chainflow_feedback_stage2_v2/history_index.json",
+          "size": 39434882,
+          "sha256": "8a8c7dd41fad3e639be8d4f7c53ac58dab3bb0da428462b3e335f58bd0c54958"
+        },
+        {
+          "path": "data/indexes/research/chainflow_feedback_stage2_v4/video8_full14_index.json",
+          "size": 1217905929,
+          "sha256": "b32935e177aa27bd3493b7b6a560341c7b14deb4fcf367adc10bcb3c10a12724"
+        },
+        {
+          "path": "data/indexes/research/chainflow_feedback_stage2_v4_scaled237k/simscale_video8_index.json",
+          "size": 1162233636,
+          "sha256": "f4a678f552a51b59c1335757bac85d6066443421997cb40d9249e1e14dac2710"
+        }
+      ],
+      "path": "weights/Trajectories/Metadata/drivetraj_metadata.tar.gz"
+    },
+    {
+      "archive": "drivesta_navtrainval_001-of-016.tar.gz",
+      "archive_sha256": "1e50a9685acfa7ea6707b6ecdee15f49d5fb20f15f444b5ad74d070af2d8f728",
+      "bytes": 2163552540,
+      "source_bytes": 3728687752,
+      "scenes": 6455,
+      "files": 45215,
+      "dataset": "navtrainval",
+      "part": 1,
+      "parts": 16,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 1849.1,
+      "path": "weights/Trajectories/Navtrainval/drivetraj_navtrainval_001-of-016.tar.gz"
+    },
+    {
+      "archive": "drivesta_navtrainval_002-of-016.tar.gz",
+      "archive_sha256": "e3dcd003b539bc9b237ad28463965f2b52c9a19ad36c13facf3e7612a03f5a17",
+      "bytes": 2165151736,
+      "source_bytes": 3733648270,
+      "scenes": 6456,
+      "files": 45221,
+      "dataset": "navtrainval",
+      "part": 2,
+      "parts": 16,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 1874.18,
+      "path": "weights/Trajectories/Navtrainval/drivetraj_navtrainval_002-of-016.tar.gz"
+    },
+    {
+      "archive": "drivesta_navtrainval_003-of-016.tar.gz",
+      "archive_sha256": "d5a86a827bd7b70b0b68e4691ccbc69136b41c7eb7101a2518647885064f5971",
+      "bytes": 2164397014,
+      "source_bytes": 3730512699,
+      "scenes": 6455,
+      "files": 45217,
+      "dataset": "navtrainval",
+      "part": 3,
+      "parts": 16,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 1871.68,
+      "path": "weights/Trajectories/Navtrainval/drivetraj_navtrainval_003-of-016.tar.gz"
+    },
+    {
+      "archive": "drivesta_navtrainval_004-of-016.tar.gz",
+      "archive_sha256": "f6582ef1b3eb416a7d999e3414ac8baf5fbab754f96884de687ae734cdcb8208",
+      "bytes": 2165115928,
+      "source_bytes": 3730608018,
+      "scenes": 6456,
+      "files": 45227,
+      "dataset": "navtrainval",
+      "part": 4,
+      "parts": 16,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 1852.47,
+      "path": "weights/Trajectories/Navtrainval/drivetraj_navtrainval_004-of-016.tar.gz"
+    },
+    {
+      "archive": "drivesta_navtrainval_005-of-016.tar.gz",
+      "archive_sha256": "cc6779579aaba2c53e613325036edda835d99adcd342cf394e788fed97c6dd77",
+      "bytes": 2163402562,
+      "source_bytes": 3727691328,
+      "scenes": 6455,
+      "files": 45212,
+      "dataset": "navtrainval",
+      "part": 5,
+      "parts": 16,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 1857.99,
+      "path": "weights/Trajectories/Navtrainval/drivetraj_navtrainval_005-of-016.tar.gz"
+    },
+    {
+      "archive": "drivesta_navtrainval_006-of-016.tar.gz",
+      "archive_sha256": "6eb176bcaf4f6fa4c242cad9de978bb6743160949338afecaefc91e7b6d34998",
+      "bytes": 2164671548,
+      "source_bytes": 3731277787,
+      "scenes": 6456,
+      "files": 45220,
+      "dataset": "navtrainval",
+      "part": 6,
+      "parts": 16,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 1859.37,
+      "path": "weights/Trajectories/Navtrainval/drivetraj_navtrainval_006-of-016.tar.gz"
+    },
+    {
+      "archive": "drivesta_navtrainval_007-of-016.tar.gz",
+      "archive_sha256": "4bbaf2a0acbd02af4734c14ae650dbe0a563175e06b7a9b050e06871b3317975",
+      "bytes": 2166553054,
+      "source_bytes": 3738699573,
+      "scenes": 6455,
+      "files": 45233,
+      "dataset": "navtrainval",
+      "part": 7,
+      "parts": 16,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 1872.93,
+      "path": "weights/Trajectories/Navtrainval/drivetraj_navtrainval_007-of-016.tar.gz"
+    },
+    {
+      "archive": "drivesta_navtrainval_008-of-016.tar.gz",
+      "archive_sha256": "6a9622c6b597d83774714709066991c5348bace485eac68fc00ed1a2bacbfead",
+      "bytes": 2164241243,
+      "source_bytes": 3727783873,
+      "scenes": 6456,
+      "files": 45215,
+      "dataset": "navtrainval",
+      "part": 8,
+      "parts": 16,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 1877.68,
+      "path": "weights/Trajectories/Navtrainval/drivetraj_navtrainval_008-of-016.tar.gz"
+    },
+    {
+      "archive": "drivesta_navtrainval_009-of-016.tar.gz",
+      "archive_sha256": "227b11372ffd2100f154ecd55da27128c3b5735730c2434a2af7978ef62d1af4",
+      "bytes": 2165206282,
+      "source_bytes": 3730058486,
+      "scenes": 6455,
+      "files": 45214,
+      "dataset": "navtrainval",
+      "part": 9,
+      "parts": 16,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 1854.39,
+      "path": "weights/Trajectories/Navtrainval/drivetraj_navtrainval_009-of-016.tar.gz"
+    },
+    {
+      "archive": "drivesta_navtrainval_010-of-016.tar.gz",
+      "archive_sha256": "aa0343fdeafcba64ce212cba9a5e2e0fd394cf1f7c1a2cb80fea2a2c8c033a3a",
+      "bytes": 2162852489,
+      "source_bytes": 3722498396,
+      "scenes": 6456,
+      "files": 45205,
+      "dataset": "navtrainval",
+      "part": 10,
+      "parts": 16,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 1857.8,
+      "path": "weights/Trajectories/Navtrainval/drivetraj_navtrainval_010-of-016.tar.gz"
+    },
+    {
+      "archive": "drivesta_navtrainval_011-of-016.tar.gz",
+      "archive_sha256": "69144c6f575028030e871d4911b3480d24e2357d19736e5a6447bfc70e89e8e2",
+      "bytes": 2164273162,
+      "source_bytes": 3729805945,
+      "scenes": 6455,
+      "files": 45218,
+      "dataset": "navtrainval",
+      "part": 11,
+      "parts": 16,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 1857.01,
+      "path": "weights/Trajectories/Navtrainval/drivetraj_navtrainval_011-of-016.tar.gz"
+    },
+    {
+      "archive": "drivesta_navtrainval_012-of-016.tar.gz",
+      "archive_sha256": "6c55ff6c16f4e6e98ac97d5088cb418af76410fb158ad17482874ef35503dd6e",
+      "bytes": 2166185795,
+      "source_bytes": 3732256277,
+      "scenes": 6456,
+      "files": 45222,
+      "dataset": "navtrainval",
+      "part": 12,
+      "parts": 16,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 1856.39,
+      "path": "weights/Trajectories/Navtrainval/drivetraj_navtrainval_012-of-016.tar.gz"
+    },
+    {
+      "archive": "drivesta_navtrainval_013-of-016.tar.gz",
+      "archive_sha256": "29eeeb59c5b79873656fe62ce48de62b6323e62068869f9eb469d8af06172328",
+      "bytes": 2163955303,
+      "source_bytes": 3727249072,
+      "scenes": 6455,
+      "files": 45208,
+      "dataset": "navtrainval",
+      "part": 13,
+      "parts": 16,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 1844.8,
+      "path": "weights/Trajectories/Navtrainval/drivetraj_navtrainval_013-of-016.tar.gz"
+    },
+    {
+      "archive": "drivesta_navtrainval_014-of-016.tar.gz",
+      "archive_sha256": "d446615e5180b837e40f2d58da938dba564536b46ef45f21767584ff5bf5c05c",
+      "bytes": 2172940375,
+      "source_bytes": 3752356282,
+      "scenes": 6456,
+      "files": 45262,
+      "dataset": "navtrainval",
+      "part": 14,
+      "parts": 16,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 1764.6,
+      "path": "weights/Trajectories/Navtrainval/drivetraj_navtrainval_014-of-016.tar.gz"
+    },
+    {
+      "archive": "drivesta_navtrainval_015-of-016.tar.gz",
+      "archive_sha256": "4cd6455b29e65e92587fe11c8f7bd9c170f89092f8f79affe461d3a6908af123",
+      "bytes": 2176203501,
+      "source_bytes": 3769488010,
+      "scenes": 6455,
+      "files": 45285,
+      "dataset": "navtrainval",
+      "part": 15,
+      "parts": 16,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 1770.83,
+      "path": "weights/Trajectories/Navtrainval/drivetraj_navtrainval_015-of-016.tar.gz"
+    },
+    {
+      "archive": "drivesta_navtrainval_016-of-016.tar.gz",
+      "archive_sha256": "c5bcf42be9281d82c76385efbeae21f2d4881e64030a23e418cac0ea909f245d",
+      "bytes": 2175678629,
+      "source_bytes": 3762098784,
+      "scenes": 6456,
+      "files": 45282,
+      "dataset": "navtrainval",
+      "part": 16,
+      "parts": 16,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 1797.14,
+      "path": "weights/Trajectories/Navtrainval/drivetraj_navtrainval_016-of-016.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_001-of-032.tar.gz",
+      "archive_sha256": "ec64080f3c56dfb9293cd1b16599eb9ec1fa1d655ebdd2d82f069415aeb35ceb",
+      "bytes": 3444823912,
+      "source_bytes": 7212051543,
+      "scenes": 6400,
+      "files": 63735,
+      "dataset": "simscale",
+      "part": 1,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2613.13,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_001-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_002-of-032.tar.gz",
+      "archive_sha256": "6e918b74f072953ecdf5cb326ac02a1c6f2ba02e0e6f95c3fd65159ef7ae0633",
+      "bytes": 3450746811,
+      "source_bytes": 7212699232,
+      "scenes": 6401,
+      "files": 63731,
+      "dataset": "simscale",
+      "part": 2,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2584.67,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_002-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_003-of-032.tar.gz",
+      "archive_sha256": "df31aef229dfbb3442016e730595d17a0de6d89b630b9ebc485ebc847aaf9ee7",
+      "bytes": 3451460567,
+      "source_bytes": 7213719285,
+      "scenes": 6401,
+      "files": 63714,
+      "dataset": "simscale",
+      "part": 3,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2592.25,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_003-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_004-of-032.tar.gz",
+      "archive_sha256": "543cdc517484097d1c4649adc44b78af67333c87b51c331dde86ae1df74e06b3",
+      "bytes": 3449184744,
+      "source_bytes": 7214567115,
+      "scenes": 6401,
+      "files": 63740,
+      "dataset": "simscale",
+      "part": 4,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2592.4,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_004-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_005-of-032.tar.gz",
+      "archive_sha256": "ce7ad3330a45824c481630178cc7d78d6df24846a380875c9f06ce36eb05468c",
+      "bytes": 3444943478,
+      "source_bytes": 7200538386,
+      "scenes": 6401,
+      "files": 63754,
+      "dataset": "simscale",
+      "part": 5,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2593.93,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_005-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_006-of-032.tar.gz",
+      "archive_sha256": "3443638a73b6fc699f0516c1626685fef5020a17831db74fc2584914915338fe",
+      "bytes": 3447635240,
+      "source_bytes": 7197248640,
+      "scenes": 6401,
+      "files": 63698,
+      "dataset": "simscale",
+      "part": 6,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2599.82,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_006-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_007-of-032.tar.gz",
+      "archive_sha256": "56c0fb8d127ec7926adefe232b1fab7f54e640be3ab5146fb9ad2ba725f852ce",
+      "bytes": 3453952435,
+      "source_bytes": 7220846926,
+      "scenes": 6401,
+      "files": 63755,
+      "dataset": "simscale",
+      "part": 7,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2597.1,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_007-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_008-of-032.tar.gz",
+      "archive_sha256": "79fd8d4b2e41de7a852e1e32af9d0a72c37335593fe4b0b0bde650f964ad380c",
+      "bytes": 3446247440,
+      "source_bytes": 7214260041,
+      "scenes": 6401,
+      "files": 63758,
+      "dataset": "simscale",
+      "part": 8,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2571.51,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_008-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_009-of-032.tar.gz",
+      "archive_sha256": "17ef8507a9d3a14f6244f06ebd7eaba20d1f4d8b4f49a9b13ca90a62315aab00",
+      "bytes": 3448157038,
+      "source_bytes": 7216505322,
+      "scenes": 6401,
+      "files": 63719,
+      "dataset": "simscale",
+      "part": 9,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2598.7,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_009-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_010-of-032.tar.gz",
+      "archive_sha256": "fecf776d4a549559f7cccb30717310e8003f13bab7abb7c8a2e882bb8e185fd8",
+      "bytes": 3450966861,
+      "source_bytes": 7218050754,
+      "scenes": 6401,
+      "files": 63752,
+      "dataset": "simscale",
+      "part": 10,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2588.66,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_010-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_011-of-032.tar.gz",
+      "archive_sha256": "9aee0b2e5dc72cab28773fb11233fc8ca970e56f40c2e9279bbe08b6626af3f8",
+      "bytes": 3448452409,
+      "source_bytes": 7210344581,
+      "scenes": 6401,
+      "files": 63751,
+      "dataset": "simscale",
+      "part": 11,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2579.99,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_011-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_012-of-032.tar.gz",
+      "archive_sha256": "f1b64c8be2176c9a4c330003697960e56c5944e48c954493a57e593f906f23ab",
+      "bytes": 3450913817,
+      "source_bytes": 7202593670,
+      "scenes": 6401,
+      "files": 63742,
+      "dataset": "simscale",
+      "part": 12,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2581.93,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_012-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_013-of-032.tar.gz",
+      "archive_sha256": "366ee7d2fb3c1f898b30a5a93aa1a805fdca4e7084e9fd37791a2750c1d37857",
+      "bytes": 3457327014,
+      "source_bytes": 7215850141,
+      "scenes": 6401,
+      "files": 63753,
+      "dataset": "simscale",
+      "part": 13,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2593.45,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_013-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_014-of-032.tar.gz",
+      "archive_sha256": "01a585cb782f291c55849e093e836516f7632734ceb6a95be2bec36dc314f14a",
+      "bytes": 3445373795,
+      "source_bytes": 7203637914,
+      "scenes": 6401,
+      "files": 63727,
+      "dataset": "simscale",
+      "part": 14,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2571.81,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_014-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_015-of-032.tar.gz",
+      "archive_sha256": "be3f87ad44ce79ea2dc0b19fd4c73427b7edb5aaea43ae0baade58d364aa6eee",
+      "bytes": 3449452807,
+      "source_bytes": 7200099148,
+      "scenes": 6401,
+      "files": 63705,
+      "dataset": "simscale",
+      "part": 15,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2581.66,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_015-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_016-of-032.tar.gz",
+      "archive_sha256": "76617ae55df6431a6e299f1dc7e4e4179e66b3d227c4f5149ac1297bedbee8a8",
+      "bytes": 3443696705,
+      "source_bytes": 7213169418,
+      "scenes": 6401,
+      "files": 63736,
+      "dataset": "simscale",
+      "part": 16,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2585.58,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_016-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_017-of-032.tar.gz",
+      "archive_sha256": "a0e853139692e2e0aa2b9c783aa0f91f3b85b8c19d810610698f8763dce73404",
+      "bytes": 3450158134,
+      "source_bytes": 7207764266,
+      "scenes": 6401,
+      "files": 63752,
+      "dataset": "simscale",
+      "part": 17,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2553.61,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_017-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_018-of-032.tar.gz",
+      "archive_sha256": "44862f9df53ba3186a80b4a2c0c85f3651f51277ca6c6556223d738791f80d41",
+      "bytes": 3449788802,
+      "source_bytes": 7220045755,
+      "scenes": 6401,
+      "files": 63769,
+      "dataset": "simscale",
+      "part": 18,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2571.06,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_018-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_019-of-032.tar.gz",
+      "archive_sha256": "16f113234c8be29f8ab77e24048acfbb88f7267e49a1bd930119b22f7e49ef07",
+      "bytes": 3444983721,
+      "source_bytes": 7204482517,
+      "scenes": 6401,
+      "files": 63754,
+      "dataset": "simscale",
+      "part": 19,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2441.44,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_019-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_020-of-032.tar.gz",
+      "archive_sha256": "c3169f2f2b5020c70f3409b414a91e2122c7734627854320990a6261d4778cef",
+      "bytes": 3447499254,
+      "source_bytes": 7202674505,
+      "scenes": 6401,
+      "files": 63748,
+      "dataset": "simscale",
+      "part": 20,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2559.05,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_020-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_021-of-032.tar.gz",
+      "archive_sha256": "eb7bb8031fe8f3fab64e8c0b03bbf5d74ceaf14a22b5cf3761bd9e3a76c45d16",
+      "bytes": 3445346841,
+      "source_bytes": 7204578631,
+      "scenes": 6401,
+      "files": 63707,
+      "dataset": "simscale",
+      "part": 21,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2544.85,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_021-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_022-of-032.tar.gz",
+      "archive_sha256": "ddf35ea26067473dde36d175af488fedab2d79ee35f72684ac61903a796e3d4f",
+      "bytes": 3455473796,
+      "source_bytes": 7210073350,
+      "scenes": 6401,
+      "files": 63775,
+      "dataset": "simscale",
+      "part": 22,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2563.21,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_022-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_023-of-032.tar.gz",
+      "archive_sha256": "853759abb1bb0f338c4deae4e4ed3e3fe3271a27b880a4314f0c465052a69de1",
+      "bytes": 3445465989,
+      "source_bytes": 7213867728,
+      "scenes": 6401,
+      "files": 63753,
+      "dataset": "simscale",
+      "part": 23,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2559.75,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_023-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_024-of-032.tar.gz",
+      "archive_sha256": "534d38bd1144e7a025a82c2e3990d4b31f7ea0a15d6b4bee119d9f29b5edf206",
+      "bytes": 3445927682,
+      "source_bytes": 7211180840,
+      "scenes": 6401,
+      "files": 63741,
+      "dataset": "simscale",
+      "part": 24,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2567.4,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_024-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_025-of-032.tar.gz",
+      "archive_sha256": "d954bf029050790d913c3eaa81f4447cccac8cdf1604f6a39dfdc16444717ae8",
+      "bytes": 3447250180,
+      "source_bytes": 7215466758,
+      "scenes": 6401,
+      "files": 63741,
+      "dataset": "simscale",
+      "part": 25,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2544.78,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_025-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_026-of-032.tar.gz",
+      "archive_sha256": "f2f8592a616c68cbb8f4e5d62f8e9463ef0cca2869d2f70334b50eebf35ebfdd",
+      "bytes": 3448661282,
+      "source_bytes": 7216519300,
+      "scenes": 6401,
+      "files": 63775,
+      "dataset": "simscale",
+      "part": 26,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2557.12,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_026-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_027-of-032.tar.gz",
+      "archive_sha256": "0b5d9977d5026ca87a1a99fa8f7c79a8fcf27b5f78577567c53b9ad6de3a6d5f",
+      "bytes": 3447515292,
+      "source_bytes": 7194947014,
+      "scenes": 6401,
+      "files": 63738,
+      "dataset": "simscale",
+      "part": 27,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2557.24,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_027-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_028-of-032.tar.gz",
+      "archive_sha256": "2a667195c7683dbd6b1e5a401991ea76ae38a413ab924347e5450d0e9bbf3567",
+      "bytes": 3452176882,
+      "source_bytes": 7213371834,
+      "scenes": 6401,
+      "files": 63769,
+      "dataset": "simscale",
+      "part": 28,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2556.17,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_028-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_029-of-032.tar.gz",
+      "archive_sha256": "49b96c4651a224defa8ae234bf04361aa7f92398f67f67dbe44e664e8a84992d",
+      "bytes": 3451671109,
+      "source_bytes": 7208656397,
+      "scenes": 6401,
+      "files": 63761,
+      "dataset": "simscale",
+      "part": 29,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2540.84,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_029-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_030-of-032.tar.gz",
+      "archive_sha256": "6b4c4e6f3ef845e0167e61e5bcbf9dcfe04bd710e1225b179ebadfaef898aae1",
+      "bytes": 3449128106,
+      "source_bytes": 7204003530,
+      "scenes": 6401,
+      "files": 63759,
+      "dataset": "simscale",
+      "part": 30,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2560.97,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_030-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_031-of-032.tar.gz",
+      "archive_sha256": "7ad4cddad4493d9c40c459c64eda5355164bb7cbffe5d145f18440c712f17fe6",
+      "bytes": 3446550547,
+      "source_bytes": 7221835528,
+      "scenes": 6401,
+      "files": 63744,
+      "dataset": "simscale",
+      "part": 31,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2542.37,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_031-of-032.tar.gz"
+    },
+    {
+      "archive": "drivesta_simscale_032-of-032.tar.gz",
+      "archive_sha256": "3bcba6ae31c38a03b4ba2769aa5d0ba47769c7161b9fa2881a4ad102c50e00ea",
+      "bytes": 3452655662,
+      "source_bytes": 7201149464,
+      "scenes": 6401,
+      "files": 63740,
+      "dataset": "simscale",
+      "part": 32,
+      "parts": 32,
+      "verified": "all member SHA256 + gzip CRC",
+      "elapsed_seconds": 2564.52,
+      "path": "weights/Trajectories/SimScale/drivetraj_simscale_032-of-032.tar.gz"
+    }
+  ],
+  "layout": "Categorized trajectory archives and unpacked model weights"
+}

@@ -1,0 +1,165 @@
+agent:
+  _target_: navsim.agents.drivesta.drivesta_agent.DriveSTAAgent
+  config:
+
+    # Trajectory proposals and sampling
+    proposal_num: 64
+    num_poses: 8
+    long_trajectory_additional_poses: 2
+    ref_num: 4
+    scorer_ref_num: 4
+    shared_refiner: false
+    trajectory_sampling:
+      _target_: nuplan.planning.simulation.trajectory.trajectory_sampling.TrajectorySampling
+      time_horizon: 4
+      interval_length: 0.5
+    num_scene_tokens: 16
+    one_token_per_traj: true
+    full_history_status: false
+
+    # Autoregressive proposal generation
+    ar_decoder_num_layers: 1
+    ar_bicycle_dt: 0.5
+    scorer_detach_proposals: true
+    pdm_score_detach_proposals: true
+
+    # Residual diffusion refinement
+    use_diffusion_decoder: false
+    train_diffusion_decoder_only: false
+    train_scorer: true
+    diffusion_type: ddim
+    diffusion_num_layers: 12
+    diffusion_num_heads: 8
+    diffusion_d_ffn: 1024
+    diffusion_delta_scale: 1.0
+    diffusion_eval_noise_seed: 0
+    diffusion_ego_status_dim: 8
+    diffusion_vlm_hidden_dim: 1536
+    diffusion_use_ar_proposal_tokens: false
+
+    # Diffusion inference schedule
+    ddim_num_train_timesteps: 1000
+    ddim_beta_schedule: scaled_linear
+    diffusion_num_inference_steps: 2
+    flow_matching_num_timestep_buckets: 1000
+    flow_matching_noise_beta_alpha: 1.5
+    flow_matching_noise_beta_beta: 1.0
+    flow_matching_noise_scale: 0.999
+
+    # Observation inputs
+    use_vlm_feature_cache: false
+    vlm_feature_cache_path: null
+    vlm_feature_cache_format: gz
+    vlm_feature_cache_name: internvl_feature
+    vlm_hidden_key: last_hidden_state
+
+    # Official PDM component weights
+    noc: 1.0
+    dac: 1.0
+    ddc: 0.0
+    ttc: 5.0
+    ep: 5.0
+    comfort: 2.0
+
+    # Transformer dimensions
+    tf_d_model: 256
+    tf_d_ffn: 1024
+    cam_f0:
+    - 3
+    cam_l0:
+    - 3
+    cam_l1: []
+    cam_l2: []
+    cam_r0:
+    - 3
+    cam_r1: []
+    cam_r2: []
+    cam_b0:
+    - 3
+    lidar_pc: []
+
+    # Image encoder and LoRA
+    image_size:
+    - 1148
+    - 672
+    image_backbone:
+      model_name: timm/vit_small_patch14_reg4_dinov2.lvd142m
+      model_weights: ${oc.env:DRIVESTA_BACKBONE_ROOT,${oc.env:DRIVESTA_ROOT}/weights/Backbones}/dinov2/model.safetensors
+      use_lora: true
+      finetune: false
+      lora_rank: 32
+      focus_front_cam: false
+      use_feature_pooling: false
+      compress_fc: false
+
+    # Optional lidar branch
+    lidar_min_x: -35
+    lidar_max_x: 35
+    lidar_min_y: -35
+    lidar_max_y: 35
+    lidar_image_size:
+    - 518
+    - 518
+    lidar_hist_max_per_pixel: 5
+    lidar_max_height: 100.0
+    lidar_split_height: 0.2
+    lidar_use_ground_plane: true
+    lidar_backbone:
+      model_name: timm/vit_small_patch14_reg4_dinov2.lvd142m
+      model_weights: ${oc.env:DRIVESTA_BACKBONE_ROOT,${oc.env:DRIVESTA_ROOT}/weights/Backbones}/dinov2/model.safetensors
+      use_lora: true
+      finetune: false
+      lora_rank: 32
+      in_chans: 2
+
+    # Scorer and refiner options
+    double_score: false
+    agent_pred: false
+    area_pred: false
+    bev_map: false
+    bev_agent: false
+    refiner_num_heads: 1
+    refiner_ls_values: 0.0
+    scorer_use_serial_vlm_context: false
+    scorer_use_mode_cross_attention: false
+    scorer_mode_cross_attn_heads: null
+
+  # Training objective
+  loss:
+    _target_: navsim.agents.drivesta.losses.proposal.DriveSTAProposalLoss
+    auxiliary_weight: 0.25
+    auxiliary_warmup_epochs: 2.0
+    heading_weight: 0.25
+    replay_weight: 0.25
+    total_score_weight: 0.5
+    # Pairwise ranking loss; independent of LoRA rank and distributed RANK.
+    rank_weight: 0.05
+    rank_warmup_epochs: 2.0
+    rank_top_k: 8
+    rank_gap_min: 0.005
+    rank_temperature: 0.05
+    matching: injective
+    diffusion_loss_weight: 10.0
+    diffusion_trajectory_loss_weight: 20.0
+    mask_unavailable_long_gt: true
+
+  # Checkpoint initialization
+  checkpoint_path: ${oc.env:DRIVESTA_ROOT}/weights/Checkpoints/scale_proposal.ckpt
+  checkpoint_strict_load: true
+
+  # Optimizer
+  lr_args:
+    name: AdamW
+    base_lr: 0.0002
+    base_batch_size: 64
+
+  # Learning-rate schedule
+  scheduler_args:
+    num_epochs: 25
+    dataset_size: 232672
+
+  # Training runtime
+  batch_size: 6
+  num_gpus: 8
+  progress_bar: false
+  console_log_every_n_steps: 100

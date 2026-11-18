@@ -1,0 +1,9 @@
+version: shortfall_continuation_v1
+base_config: feedback/configs/high_score_256.yaml
+source: data/mining/navtrainval
+tokens_file: data/mining/navtrainval/shortfall_tokens.txt
+expected_scenes: 690
+output: data/mining/shortfall690
+budgets:
+- 8192
+- 32768

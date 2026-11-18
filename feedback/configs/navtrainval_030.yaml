@@ -1,0 +1,46 @@
+version: navtrainval_030_budget_v1
+base_protocol: feedback/configs/dense_dataset_v1.yaml
+manifest_directory: feedback/data/dense_gt_v1/manifests/navtrainval_v1
+output: data/mining/navtrainval_030
+sampling:
+  integer_lattice_m: 0.05
+  dense_m: 0.3
+  base_bounds_m:
+  - -4.8
+  - 4.8
+  - -1.8
+  - 1.8
+  hard_bounds_m:
+  - -15.0
+  - 40.0
+  - -12.0
+  - 12.0
+  coarse_m: 1.2
+  offset_probe_m: 0.6
+  offset_probe_limit: 256
+  max_unique_goals: 3072
+  adaptive_batch: 256
+  exploration_fraction: 0.25
+  local_radius_m: 1.2
+  high_pdm_raw: 0.95
+  component_jump_raw: 0.05
+storage:
+  chunk_candidates: 256
+  retain_all_scores: true
+  format: scene_structured_npy_float64_labels
+execution:
+  workers: 128
+  scenes_per_job: 16
+  queued_jobs_per_worker: 2
+  threads_per_worker: 1
+  progress_interval_s: 30
+  minimum_free_gib: 15
+  selection_seed: 20261014
+estimate:
+  measured_workers: 128
+  measured_candidates_per_s: 2540.97267
+  throughput_source: feedback/runs/profile_density_20261014_scaling
+  uncached_scene_allowance_mib: 0.6
+  end_to_end_overhead_fraction:
+  - 0.15
+  - 0.5

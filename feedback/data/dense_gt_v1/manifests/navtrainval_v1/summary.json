@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-14T02:06:57.261696+00:00",
+  "metadata": "/data/xinyao/navsim_workspace/chainflow/exp/navsim_cache/train_metric_cache/metadata/train_metric_cache_metadata_node_0.csv",
+  "split_config": "/data/xinyao/navsim_workspace/DriveScorer/navsim/planning/script/config/training/default_train_val_test_log_split.yaml",
+  "cache_root": "/data/xinyao/navsim_workspace/chainflow/exp/navsim_cache/train_metric_cache",
+  "total_scenes": 103288,
+  "unique_tokens": 103288,
+  "splits": {
+    "train": {
+      "scenes": 85109,
+      "logs": 978
+    },
+    "val": {
+      "scenes": 18179,
+      "logs": 214
+    }
+  },
+  "test_scenes": 0,
+  "log_overlap": 0,
+  "cache_file_existence": "not_checked",
+  "cache_contents": "not_decoded",
+  "scene_timestamp_alignment": "not_checked",
+  "sensor_features": "not_checked",
+  "trajectory_generation_started": false,
+  "training_started": false,
+  "manifest_directory_write_readback": "passed"
+}

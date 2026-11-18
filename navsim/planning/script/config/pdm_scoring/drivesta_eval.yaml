@@ -1,0 +1,39 @@
+hydra:
+  run:
+    dir: ${output_dir}
+  output_subdir: ${output_dir}/code/hydra
+  job:
+    chdir: false
+  searchpath:
+  - pkg://navsim.planning.script.config.common
+defaults:
+- default_common
+- default_evaluation
+- default_scoring_parameters
+- ddp
+- agent: drivesta
+- _self_
+- override train_test_split: navtest
+metric_cache_path: ${oc.env:NAVSIM_METRIC_CACHE_ROOT}/metric_cache
+seed: 0
+deterministic: true
+inference_only: true
+restore_training_config: true
+training_config_path: null
+evaluation_agent_overrides: {}
+require_complete_evaluation: true
+write_evaluation_summary: true
+expected_eval_scenes: 12146
+required_data_split: test
+agent:
+  checkpoint_strict_load: true
+dataloader:
+  params:
+    batch_size: 1
+    num_workers: 4
+trainer:
+  params:
+    devices: 8
+    precision: 32-true
+    logger: false
+    enable_checkpointing: false
