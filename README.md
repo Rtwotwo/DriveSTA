@@ -5,9 +5,9 @@
 <h1 align="center">Beyond a Single Human Demonstration:<br>Learning from Scored Trajectory Alternatives for End-to-End Driving</h1>
 
 <p align="center">
-  <img src="docs/assets/badges/arxiv-coming-soon.svg" alt="arXiv (coming soon)" height="40"> &nbsp;
-  <a href="https://rtwotwo.github.io/DriveSTA/"><img src="docs/assets/badges/project-page.svg" alt="Project Page" height="40"></a> &nbsp;
-  <a href="https://huggingface.co/Rtwotwo/DriveSTA"><img src="docs/assets/badges/hugging-face.svg" alt="HF" height="40"></a>
+  <img src="docs/assets/badges/arxiv-coming-soon.svg" alt="arXiv (coming soon)" title="Paper coming soon" width="120" height="28"> &nbsp;
+  <a href="https://rtwotwo.github.io/DriveSTA/"><img src="docs/assets/badges/project-page.svg" alt="Project Page" width="120" height="28"></a> &nbsp;
+  <a href="https://huggingface.co/Rtwotwo/DriveSTA"><img src="docs/assets/badges/hugging-face.svg" alt="HF" width="120" height="28"></a>
 </p>
 
 **DriveSTA** learns to generate, refine and score driving trajectories from scored alternatives to a single human demonstration. It combines proposal learning with JEPA-conditioned temporal refinement. **Base and Scale use one `DriveSTAAgent` and one `DriveSTAModel`; configuration selects the data mixture and refinement capability.**
