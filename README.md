@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/images/drivesta-wordmark.svg" width="560" alt="DriveSTA">
+  <img src="docs/assets/images/drivesta-logo.svg" width="560" alt="DriveSTA">
 </p>
 
 <h1 align="center">Beyond a Single Human Demonstration:<br>Learning from Scored Trajectory Alternatives for End-to-End Driving</h1>
