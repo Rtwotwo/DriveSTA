@@ -10,25 +10,50 @@
   <meta property="og:image" content="https://rtwotwo.github.io/DriveSTA/assets/images/demo-poster.jpg">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="citation_author" content="Xinyao Rao">
+  <meta name="citation_author" content="Zecheng Tang">
+  <meta name="citation_author" content="Liuxuan Sun">
+  <meta name="citation_author" content="Zheyuan Lai">
+  <meta name="citation_author" content="Minjun Yu">
+  <meta name="citation_author" content="Xun Cao">
+  <meta name="citation_author" content="Wei Li">
+  <meta name="citation_title" content="Beyond a Single Human Demonstration: Learning from Scored Trajectory Alternatives for End-to-End Driving">
+  <meta name="citation_date" content="2026/11/20">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2611.27515">
   <title>DriveSTA | Beyond a Single Human Demonstration</title>
   <link rel="canonical" href="https://rtwotwo.github.io/DriveSTA/">
   <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261111c">
-  <script defer src="app.js?v=20261111c"></script>
+  <link rel="stylesheet" href="style.css?v=20261123">
+  <script defer src="app.js?v=20261123"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header><nav class="container" aria-label="Main navigation">
-  <a class="brand" href="#"><img src="assets/images/logo.svg" alt="" width="32" height="32">Drive<span>Traj</span></a>
-  <div class="nav-links"><a href="#method">Method</a><a href="#navtest">NAVTEST</a><a href="#hugsim">HUGSIM</a><a href="#results">Results</a><a href="https://github.com/Rtwotwo/DriveSTA">GitHub ↗</a></div>
+  <a class="brand" href="#"><img src="assets/images/logo.svg" alt="" width="32" height="32">Drive<span>STA</span></a>
+  <div class="nav-links"><a href="#method">Method</a><a href="#navtest">NAVTEST</a><a href="#hugsim">HUGSIM</a><a href="#results">Results</a><a href="#data">Data</a><a href="https://github.com/Rtwotwo/DriveSTA">GitHub ↗</a></div>
 </nav></header>
 <main id="main">
 <section class="hero container">
   <h1>Beyond a Single Human Demonstration:<br class="desktop-title-break"> Learning from Scored Trajectory Alternatives for End-to-End Driving</h1>
+  <div class="paper-authors" aria-label="Paper authors">
+    <span>Xinyao Rao<sup>1</sup></span>
+    <span>Zecheng Tang<sup>2</sup></span>
+    <span>Liuxuan Sun<sup>1</sup></span>
+    <span>Zheyuan Lai<sup>3</sup></span>
+    <span>Minjun Yu<sup>3</sup></span>
+    <span>Xun Cao<sup>1</sup></span>
+    <span>Wei Li<sup>1,3,*</sup></span>
+  </div>
+  <div class="paper-affiliations" aria-label="Author affiliations">
+    <span><sup>1</sup>Nanjing University</span><span><sup>2</sup>Peking University</span><span><sup>3</sup>EABOT.AI</span>
+  </div>
+  <p class="author-note"><span><sup>*</sup>Corresponding author</span><span>Contact: <a href="mailto:yoloredal@gmail.com">yoloredal@gmail.com</a></span></p>
   <div class="actions resource-actions" aria-label="Project resources">
-    <a class="resource-button" data-resource="code" role="link" aria-disabled="true" tabindex="0" title="Code link coming soon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m8 6-6 6 6 6M16 6l6 6-6 6M14 3l-4 18"/></svg>Code</a>
-    <a class="resource-button" data-resource="arxiv" role="link" aria-disabled="true" tabindex="0" title="arXiv link coming soon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/></svg>arXiv</a>
-    <a class="resource-button" data-resource="hf" role="link" aria-disabled="true" tabindex="0" title="Hugging Face link coming soon"><span class="hf-icon" aria-hidden="true">🤗</span>HF</a>
+    <a class="resource-button" data-resource="arxiv" href="https://arxiv.org/abs/2611.27515"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/></svg><span>Paper</span></a>
+    <a class="resource-button" data-resource="code" href="https://github.com/Rtwotwo/DriveSTA"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 6-6 6 6 6M16 6l6 6-6 6M14 3l-4 18"/></svg><span>Code</span></a>
+    <a class="resource-button" data-resource="models" href="https://huggingface.co/Rtwotwo/DriveSTA/tree/main/weights/Checkpoints"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5v10l-9 5-9-5V7zM3 7l9 5 9-5M12 12v10M7.5 4.5l9 5"/></svg><span>Models</span></a>
+    <a class="resource-button" data-resource="dataset" href="https://huggingface.co/Rtwotwo/DriveSTA/tree/main/weights/Trajectories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg><span>Dataset</span></a>
+    <a class="resource-button" data-resource="video" href="#film"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 3 14 9-14 9z"/></svg><span>Video</span></a>
   </div>
   <figure class="teaser-figure"><a href="assets/images/drivesta-teaser.png" target="_blank" rel="noopener"><img src="assets/images/drivesta-teaser.png" alt="DriveSTA at a glance: supervision paradigms, benchmark comparisons, HUGSIM driving sequences, and a NAVSIM interaction." width="3200" height="1519"></a><figcaption>Human driving logs record one executed trajectory per scene, while an end-to-end planner must generate and compare multiple feasible choices. DriveSTA turns a single demonstration into scored trajectory alternatives: we construct candidate paths, evaluate their execution, and retain diverse, high-quality targets to supervise planning. A shared Joint-Embedding Predictive Architecture (JEPA) encoder provides efficient temporal context from observed video. DriveSTA reaches 95.1 PDMS on NAVTEST with NAVSIM-only training; DriveSTA-Scale, trained with real and synthetic data, achieves 95.6 PDMS, along with 56.1 route completion and 46.7 HD-Score on HUGSIM.</figcaption></figure>
   <div class="film-heading" id="film"><span>DriveSTA demos</span><span>NAVSIM · HUGSIM</span></div>
@@ -77,7 +102,31 @@
 <p class="scope">All scores on a 0–100 scale. NC: no at-fault collision; DAC: drivable-area compliance; TTC: time-to-collision compliance.</p>
 <div class="data-links"><a href="assets/data/results.json" download>Results JSON ↓</a><a href="assets/data/hugsim-scores.csv" download>345 HUGSIM scores ↓</a><a href="assets/data/navtest-scores.csv" download>12.1k NAVTEST scores ↓</a></div>
 </div></section>
+<section class="section container" id="data">
+  <div class="section-heading"><h2>Open data</h2><p>308,119 scenes · Scored trajectory supervision</p></div>
+  <p class="data-intro">Browse the released trajectory banks, shared indexes and checksum inventories on Hugging Face. Each trajectory shard is an independent archive.</p>
+  <div class="table-scroll data-table"><table><caption>DriveSTA data release</caption><thead><tr><th>Collection</th><th>Contents</th></tr></thead><tbody>
+<tr><td><a href="https://huggingface.co/Rtwotwo/DriveSTA/tree/main/weights/Trajectories/Navtrainval">Navtrainval trajectories</a></td><td>103,288 scenes · 16 shards</td></tr>
+<tr><td><a href="https://huggingface.co/Rtwotwo/DriveSTA/tree/main/weights/Trajectories/SimScale">SimScale trajectories</a></td><td>204,831 scenes · 32 shards</td></tr>
+<tr><td><a href="https://huggingface.co/Rtwotwo/DriveSTA/blob/main/weights/Trajectories/Metadata/drivetraj_metadata.tar.gz">Shared metadata and indexes</a></td><td>1 archive</td></tr>
+<tr><td><a href="https://huggingface.co/Rtwotwo/DriveSTA/tree/main/manifests">Scene and shard inventories</a></td><td>Scene lookup and per-file checksums</td></tr>
+  </tbody></table></div>
+  <p class="scope">Sensor images, driving logs, maps and evaluation caches are obtained separately. Base uses 103,263 real training scenes; Scale uses 232,672 real and synthetic scenes from these banks.</p>
+  <div class="data-links"><a href="https://github.com/Rtwotwo/DriveSTA/blob/main/docs/DATA_PREPARATION.md">Data preparation guide ↗</a><a href="https://github.com/Rtwotwo/DriveSTA/blob/main/docs/DOWNLOAD_VERIFY.md">Download and verification guide ↗</a><a href="https://huggingface.co/Rtwotwo/DriveSTA/tree/main/weights/Checkpoints">Model checkpoints ↗</a></div>
+</section>
+<section class="section container" id="citation">
+  <h2>Citation</h2>
+  <p class="scope">If you find DriveSTA useful, please cite our <a href="https://arxiv.org/abs/2611.27515">paper</a>.</p>
+  <pre class="citation-code"><code>@misc{rao2026drivesta,
+  title={Beyond a Single Human Demonstration: Learning from Scored Trajectory Alternatives for End-to-End Driving},
+  author={Xinyao Rao and Zecheng Tang and Liuxuan Sun and Zheyuan Lai and Minjun Yu and Xun Cao and Wei Li},
+  year={2026},
+  eprint={2611.27515},
+  archivePrefix={arXiv},
+  url={https://arxiv.org/abs/2611.27515}
+}</code></pre>
+</section>
 </main>
-<footer class="container"><a class="brand" href="#"><img src="assets/images/logo.svg" alt="" width="28" height="28">Drive<span>Traj</span></a><p>Beyond a Single Human Demonstration</p><a href="https://rtwotwo.github.io/DriveTTO/">Related project: DriveTTO ↗</a></footer>
+<footer class="container"><a class="brand" href="#"><img src="assets/images/logo.svg" alt="" width="28" height="28">Drive<span>STA</span></a><p>Beyond a Single Human Demonstration</p><a href="https://rtwotwo.github.io/DriveTTO/">Related project: DriveTTO ↗</a></footer>
 </body>
 </html>

@@ -16,3 +16,19 @@
 /* Paper figures keep their native proportions at every viewport size. */
 .teaser-figure{margin:38px auto 0;text-align:left}.teaser-figure img,.overview-figure img{display:block;width:100%;height:auto}.teaser-figure figcaption,.overview-figure figcaption{font-size:14px;line-height:1.65;color:var(--muted);margin-top:14px;text-align:left}.overview-figure{padding-bottom:20px}
 @media(max-width:640px){.teaser-figure{margin-top:28px}.teaser-figure figcaption,.overview-figure figcaption{font-size:12px}}
+
+/* Paper authors and resource buttons. */
+.paper-authors{display:flex;justify-content:center;flex-wrap:wrap;gap:9px 22px;max-width:1120px;margin:28px auto 0;font-size:19px;line-height:1.6}
+.paper-authors>span,.paper-affiliations>span{white-space:nowrap}
+.paper-authors sup{font-size:.65em;margin-left:2px;color:#63065f}
+.paper-affiliations{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 24px;margin-top:13px;font-size:17px;color:var(--muted)}
+.paper-affiliations sup{font-size:.7em;margin-right:3px;color:#63065f}
+.author-note{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 22px;margin-top:12px;font-size:14px;color:var(--muted)}
+.author-note sup{color:#63065f}.author-note a{color:inherit}
+.resource-actions{gap:12px;margin-top:28px}
+.resource-button{min-height:46px;padding:10px 23px;gap:10px;border-radius:999px;background:#202336;color:#fff;font-size:18px;font-weight:500;line-height:1.4;transition:background .2s,transform .2s}
+.resource-button svg{width:20px;height:20px;flex:none}
+.resource-button:not([aria-disabled=true]):hover{background:#383d57;transform:translateY(-1px)}
+.data-intro{color:var(--muted);max-width:920px;font-size:17px}.data-table{margin-top:24px}.data-table a{font-weight:600}
+.citation-code{margin:22px 0 0;padding:24px;border:1px solid var(--line);border-radius:12px;background:#fff;font-size:13px;line-height:1.7;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:640px){.paper-authors{gap:8px 15px;margin-top:22px;font-size:16px}.paper-affiliations{gap:6px 16px;font-size:14px}.author-note{font-size:12px;gap:4px 14px}.resource-actions{gap:9px;margin-top:22px}.resource-button{padding:9px 17px;min-height:42px;font-size:15px}.resource-button svg{width:18px;height:18px}.nav-links{flex-wrap:wrap;gap:8px 16px}.data-intro{font-size:15px}.citation-code{padding:16px;font-size:12px}}

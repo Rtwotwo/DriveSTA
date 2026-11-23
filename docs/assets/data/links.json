@@ -1,5 +1,8 @@
 {
   "code": "https://github.com/Rtwotwo/DriveSTA",
-  "arxiv": null,
-  "hf": "https://huggingface.co/Rtwotwo/DriveSTA"
+  "arxiv": "https://arxiv.org/abs/2611.27515",
+  "hf": "https://huggingface.co/Rtwotwo/DriveSTA",
+  "models": "https://huggingface.co/Rtwotwo/DriveSTA/tree/main/weights/Checkpoints",
+  "dataset": "https://huggingface.co/Rtwotwo/DriveSTA/tree/main/weights/Trajectories",
+  "video": "#film"
 }

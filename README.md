@@ -1,13 +1,24 @@
 <p align="center">
-  <img src="docs/assets/images/drivesta-wordmark.svg" width="560" alt="DriveSTA">
+  <img src="docs/assets/images/drivesta-logo.svg" width="560" alt="DriveSTA">
 </p>
 
 <h1 align="center">Beyond a Single Human Demonstration:<br>Learning from Scored Trajectory Alternatives for End-to-End Driving</h1>
 
 <p align="center">
-  <img src="docs/assets/badges/arxiv-coming-soon.svg" alt="arXiv (coming soon)" title="Paper coming soon" width="120" height="28"> &nbsp;
-  <a href="https://rtwotwo.github.io/DriveSTA/"><img src="docs/assets/badges/project-page.svg" alt="Project Page" width="120" height="28"></a> &nbsp;
-  <a href="https://huggingface.co/Rtwotwo/DriveSTA"><img src="docs/assets/badges/hugging-face.svg" alt="HF" width="120" height="28"></a>
+  <a href="https://arxiv.org/abs/2611.27515"><img src="docs/assets/badges/arxiv.svg" alt="arXiv: 2611.27515" height="20"></a>
+  <a href="https://rtwotwo.github.io/DriveSTA/"><img src="docs/assets/badges/project-page.svg" alt="Project Page" height="20"></a>
+  <a href="https://rtwotwo.github.io/DriveSTA/#film"><img src="docs/assets/badges/video.svg" alt="Video demos" height="20"></a>
+  <a href="https://huggingface.co/Rtwotwo/DriveSTA/tree/main/weights/Checkpoints"><img src="docs/assets/badges/hugging-face.svg" alt="Hugging Face Models" height="20"></a>
+  <a href="https://huggingface.co/Rtwotwo/DriveSTA/tree/main/weights/Trajectories"><img src="docs/assets/badges/dataset.svg" alt="Hugging Face Dataset" height="20"></a>
+  <a href="LICENSE"><img src="docs/assets/badges/license.svg" alt="License: Apache 2.0" height="20"></a>
+</p>
+
+<p align="center">
+  Xinyao Rao<sup>1</sup> &nbsp; Zecheng Tang<sup>2</sup> &nbsp; Liuxuan Sun<sup>1</sup> &nbsp; Zheyuan Lai<sup>3</sup> &nbsp; Minjun Yu<sup>3</sup> &nbsp; Xun Cao<sup>1</sup> &nbsp; Wei Li<sup>1,3,*</sup>
+</p>
+<p align="center">
+  <sup>1</sup>Nanjing University &nbsp; <sup>2</sup>Peking University &nbsp; <sup>3</sup>EABOT.AI<br>
+  <sub><sup>*</sup>Corresponding author &nbsp; · &nbsp; Contact: <a href="mailto:yoloredal@gmail.com">yoloredal@gmail.com</a></sub>
 </p>
 
 **DriveSTA** learns to generate, refine and score driving trajectories from scored alternatives to a single human demonstration. It combines proposal learning with JEPA-conditioned temporal refinement. **Base and Scale use one `DriveSTAAgent` and one `DriveSTAModel`; configuration selects the data mixture and refinement capability.**
@@ -52,14 +63,27 @@ Replace `SCENE_TOKEN` with a token from your test logs. The command writes eight
 
 | Profile | Model capability | Training scenes | Checkpoint |
 | --- | --- | ---: | --- |
-| `base_proposal` | Proposal generation and scoring | 103,263 real | `weights/Checkpoints/base_proposal.ckpt` |
-| `base` | Proposals plus temporal refinement | 103,263 real | `weights/Checkpoints/base.ckpt` |
-| `scale_proposal` | Proposal generation and scoring | 232,672 mixed | `weights/Checkpoints/scale_proposal.ckpt` |
-| `scale` | Proposals plus temporal refinement | 232,672 mixed | `weights/Checkpoints/scale.ckpt` |
+| `base_proposal` | Proposal generation and scoring | 103,263 real | `weights/Checkpoints/base_proposal.ckpt` · [Download](https://huggingface.co/Rtwotwo/DriveSTA/resolve/main/weights/Checkpoints/base_s1.ckpt?download=true) |
+| `base` | Proposals plus temporal refinement | 103,263 real | `weights/Checkpoints/base.ckpt` · [Download](https://huggingface.co/Rtwotwo/DriveSTA/resolve/main/weights/Checkpoints/base_s2.ckpt?download=true) |
+| `scale_proposal` | Proposal generation and scoring | 232,672 mixed | `weights/Checkpoints/scale_proposal.ckpt` · [Download](https://huggingface.co/Rtwotwo/DriveSTA/resolve/main/weights/Checkpoints/scale_s1.ckpt?download=true) |
+| `scale` | Proposals plus temporal refinement | 232,672 mixed | `weights/Checkpoints/scale.ckpt` · [Download](https://huggingface.co/Rtwotwo/DriveSTA/resolve/main/weights/Checkpoints/scale_s2.ckpt?download=true) |
 
 The complete trajectory release contains **308,119 scenes**: 103,288 Navtrainval scenes and 204,831 SimScale scenes. The fixed Scale recipe uses 103,263 eligible real scenes plus 129,409 synthetic scenes; it does not train on the whole archive. Original data identities, scene ordering and checkpoint tensor bytes are preserved.
 
 Reported results include **95.55 NAVTEST PDMS** for DriveSTA-Scale, **91.32 NAVTEST EPDMS / 56.13 NAVHARD EPDMS** for its proposal planner, and **56.09 route completion / 46.69 HD-Score** for the refined planner on 345 HUGSIM scenarios. These are existing experimental results, not new benchmark runs for this packaging update.
+
+## Dataset downloads
+
+The released trajectory banks are hosted alongside the models on [Hugging Face](https://huggingface.co/Rtwotwo/DriveSTA/tree/main/weights/Trajectories). Use the direct collection links below to browse the shards and metadata.
+
+| Collection | Contents |
+| --- | --- |
+| [Navtrainval trajectories](https://huggingface.co/Rtwotwo/DriveSTA/tree/main/weights/Trajectories/Navtrainval) | 103,288 scenes · 16 shards |
+| [SimScale trajectories](https://huggingface.co/Rtwotwo/DriveSTA/tree/main/weights/Trajectories/SimScale) | 204,831 scenes · 32 shards |
+| [Shared metadata and indexes](https://huggingface.co/Rtwotwo/DriveSTA/blob/main/weights/Trajectories/Metadata/drivetraj_metadata.tar.gz) | 1 archive |
+| [Scene and shard inventories](https://huggingface.co/Rtwotwo/DriveSTA/tree/main/manifests) | Scene lookup and per-file checksums |
+
+The full release contains **308,119 scenes**. These banks provide trajectory supervision; obtain sensor images, driving logs, maps and evaluation caches separately. The fixed training recipes use 103,263 real scenes for Base and 232,672 real and synthetic scenes for Scale. Follow [data preparation](docs/DATA_PREPARATION.md) and [download verification](docs/DOWNLOAD_VERIFY.md) to select, verify and extract the required archives.
 
 ## Training and evaluation entry points
 
@@ -91,6 +115,21 @@ weights/                            # Checkpoints, initialization backbones and 
 ```
 
 The organization follows the NAVSIM conventions used by [ChainFlow-VLA](https://github.com/AFARI-Research/ChainFlow-VLA), while DriveSTA's public model and configuration names describe its own capabilities. Historical serialized identifiers are handled only at compatibility boundaries. Third-party library names and license notices retain their original attribution.
+
+## Citation
+
+If you find DriveSTA useful, please cite our [paper](https://arxiv.org/abs/2611.27515):
+
+```bibtex
+@misc{rao2026drivesta,
+  title={Beyond a Single Human Demonstration: Learning from Scored Trajectory Alternatives for End-to-End Driving},
+  author={Xinyao Rao and Zecheng Tang and Liuxuan Sun and Zheyuan Lai and Minjun Yu and Xun Cao and Wei Li},
+  year={2026},
+  eprint={2611.27515},
+  archivePrefix={arXiv},
+  url={https://arxiv.org/abs/2611.27515}
+}
+```
 
 ## Acknowledgements
 
