@@ -25,6 +25,14 @@
 
 [中文快速开始](docs/QUICKSTART_zh.md)
 
+## News
+
+- **2026.11.23** - Our [paper](https://arxiv.org/abs/2611.27515) is available on arXiv. Explore the method, results and driving demonstrations on the [project page](https://rtwotwo.github.io/DriveSTA/), and find the BibTeX entry in [Citation](#citation).
+- **2026.11.18** - The complete DriveSTA code release is available, including model implementations, parameter configurations, [training](docs/TRAINING.md), [inference and evaluation](docs/INFERENCE.md), and installation and data-preparation tutorials.
+- **2026.11.16** - The project is now **DriveSTA**. The README and project page feature the updated paper teaser and overview, refreshed demonstrations, and synchronized resource links.
+- **2026.11.15** - The initial inference and evaluation release added distributed prediction, PDMS scoring, and EPDMS replay evaluation.
+- **2026.11.15** - [Trajectory libraries](https://huggingface.co/Rtwotwo/DriveSTA/tree/main/weights/Trajectories), [four model checkpoints](https://huggingface.co/Rtwotwo/DriveSTA/tree/main/weights/Checkpoints), and [scene-to-shard integrity manifests](https://huggingface.co/Rtwotwo/DriveSTA/tree/main/manifests) are available on Hugging Face.
+
 ## DriveSTA at a Glance
 
 ![DriveSTA at a glance](docs/assets/images/drivesta-teaser.png)
