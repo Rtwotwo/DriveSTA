@@ -614,7 +614,9 @@
   ],
   "selection_rule": "HD >= 80; descending HD then RC; unique physical scene within each difficulty; balance three lanes until 60 seconds each; trim only the last episode per lane",
   "timing": "Original real time; repeated frames only to encode 30 fps",
-  "overlays": "Difficulty label only on HUGSIM; original NAVSIM annotations retained",
+  "overlays": "HUGSIM: recorded 8-waypoint predictions projected onto the original front-camera views, orange ribbons and dots, plus difficulty labels. Original NAVSIM annotations retained.",
   "opening": "2.4 s logo, 3.6 s panel reveal, 4.4 s overview reveal with existing-link highlights; no narration or added explanations",
-  "demo_tail_verification": "Master demo packet hashes after the opening match the previous version; web rendition is encoded from the verified master."
+  "demo_tail_verification": "Master demo packet hashes after the opening match the previous version; web rendition is encoded from the verified master.",
+  "trajectory_update": "2026-11-24",
+  "trajectory_render_metadata": "hugsim-trajectory-render.json"
 }

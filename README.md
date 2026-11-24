@@ -27,6 +27,7 @@
 
 ## News
 
+- **2026.11.24** - All 51 [HUGSIM demonstrations](https://rtwotwo.github.io/DriveSTA/#hugsim) and the overview video now visualize the recorded 8-waypoint predictions, following the paper's orange trajectory style.
 - **2026.11.23** - Our [paper](https://arxiv.org/abs/2611.27515) is available on arXiv. Explore the method, results and driving demonstrations on the [project page](https://rtwotwo.github.io/DriveSTA/), and find the BibTeX entry in [Citation](#citation).
 - **2026.11.18** - The complete DriveSTA code release is available, including model implementations, parameter configurations, [training](docs/TRAINING.md), [inference and evaluation](docs/INFERENCE.md), and installation and data-preparation tutorials.
 - **2026.11.16** - The project is now **DriveSTA**. The README and project page feature the updated paper teaser and overview, refreshed demonstrations, and synchronized resource links.

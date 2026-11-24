@@ -24,7 +24,7 @@
   <link rel="canonical" href="https://rtwotwo.github.io/DriveSTA/">
   <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css?v=20261123">
-  <script defer src="app.js?v=20261123"></script>
+  <script defer src="app.js?v=20261124-trajectories"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -57,8 +57,8 @@
   </div>
   <figure class="teaser-figure"><a href="assets/images/drivesta-teaser.png" target="_blank" rel="noopener"><img src="assets/images/drivesta-teaser.png" alt="DriveSTA at a glance: supervision paradigms, benchmark comparisons, HUGSIM driving sequences, and a NAVSIM interaction." width="3200" height="1519"></a><figcaption>Human driving logs record one executed trajectory per scene, while an end-to-end planner must generate and compare multiple feasible choices. DriveSTA turns a single demonstration into scored trajectory alternatives: we construct candidate paths, evaluate their execution, and retain diverse, high-quality targets to supervise planning. A shared Joint-Embedding Predictive Architecture (JEPA) encoder provides efficient temporal context from observed video. DriveSTA reaches 95.1 PDMS on NAVTEST with NAVSIM-only training; DriveSTA-Scale, trained with real and synthetic data, achieves 95.6 PDMS, along with 56.1 route completion and 46.7 HD-Score on HUGSIM.</figcaption></figure>
   <div class="film-heading" id="film"><span>DriveSTA demos</span><span>NAVSIM · HUGSIM</span></div>
-  <div class="film"><video id="demo" controls playsinline preload="none" poster="assets/images/demo-poster.jpg?v=20261111c" aria-label="DriveSTA introduction and selected driving demonstrations"><source src="assets/videos/drivesta-demo.mp4?v=20261111c" type="video/mp4"><track kind="chapters" src="assets/videos/demo-chapters.vtt?v=20261111c" srclang="en" label="Chapters"><p><a href="assets/videos/drivesta-demo.mp4?v=20261111c">Download the demo MP4</a></p></video></div>
-  <div class="media-footer"><span>2560 × 1440 · Multi-scene driving demonstrations</span><a href="assets/videos/drivesta-demo.mp4?v=20261111c" download>Download MP4 ↓</a></div>
+  <div class="film"><video id="demo" controls playsinline preload="none" poster="assets/images/demo-poster.jpg?v=20261111c" aria-label="DriveSTA introduction and selected driving demonstrations"><source src="assets/videos/drivesta-demo.mp4?v=20261124-trajectories" type="video/mp4"><track kind="chapters" src="assets/videos/demo-chapters.vtt?v=20261111c" srclang="en" label="Chapters"><p><a href="assets/videos/drivesta-demo.mp4?v=20261124-trajectories">Download the demo MP4</a></p></video></div>
+  <div class="media-footer"><span>2560 × 1440 · Multi-scene driving demonstrations</span><a href="assets/videos/drivesta-demo.mp4?v=20261124-trajectories" download>Download MP4 ↓</a></div>
   <p class="project-abstract">Driving logs record one executed trajectory, while a planner must generate and compare many feasible alternatives. DriveSTA turns these records into scored trajectory supervision: constrained path construction and screening yield <strong>2.61M high-quality targets</strong> from 103.3k real scenes. Dense matching teaches distinct proposals, and replay of successful and failed paths trains their scores. A second stage learns local residual corrections, guided by a pretrained Joint-Embedding Predictive Architecture (JEPA) video encoder adapted to driving observations. DriveSTA-Scale reaches <strong>95.55 NAVTEST PDMS</strong>; its Proposal planner scores <strong>91.32 NAVTEST EPDMS</strong> and <strong>56.13 NAVHARD EPDMS</strong>. On 345 HUGSIM scenarios, Refinement achieves <strong>56.09 route completion</strong> and <strong>46.69 HD-Score</strong>.</p>
 </section>
 <section class="section container" id="method">
@@ -79,7 +79,8 @@
 <div class="section-heading"><h2>HUGSIM</h2><p>High-scoring closed-loop episodes · Four difficulty levels</p></div>
 <div id="hugsim-tabs" class="dataset-tabs" role="group" aria-label="HUGSIM difficulty"></div>
 <div class="gallery-controls"><div><label for="hug-source">Dataset</label><select id="hug-source"><option value="all">All datasets</option><option value="kitti360">KITTI-360</option><option value="nuscenes">nuScenes</option><option value="pandaset">PandaSet</option><option value="waymo">Waymo</option></select></div><div><label for="hug-select">Scene</label><select id="hug-select"></select></div><div class="arrows"><button id="hug-prev" aria-label="Previous episode">←</button><span id="hug-count" aria-live="polite"></span><button id="hug-next" aria-label="Next episode">→</button></div></div>
-<div class="hug-player"><video id="hug-video" controls playsinline preload="metadata" aria-label="HUGSIM closed-loop episode"></video></div>
+<div class="hug-player"><video id="hug-video" controls playsinline preload="metadata" aria-label="HUGSIM closed-loop episode with recorded predicted trajectories"></video></div>
+<p class="scope"><strong>Predicted trajectories:</strong> Orange ribbons and dots show the recorded 8-waypoint plan (4 seconds, 0.5-second intervals), projected into the original camera views. Points outside the field of view are clipped.</p>
 <div class="episode-strip"><div><span id="hug-dataset" class="pill"></span><h3 id="hug-scene"></h3><p id="hug-meta"></p></div><div class="episode-scores"><div><strong id="hug-rc"></strong><span>Episode RC ↑</span></div><div><strong id="hug-hd"></strong><span>Episode HD-Score ↑</span></div></div></div>
 <div class="media-footer"><span>Full episodes · Original timing</span><a id="hug-download" download>Download MP4 ↓</a></div>
 <div id="hug-thumbs" class="episode-grid" aria-label="Episode previews"></div>

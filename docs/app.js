@@ -48,6 +48,7 @@ getJSON('assets/data/navtest-cases.json').then(data => {
   populate();
 }).catch(e=>reportError($('#navtest .container'),e));
 getJSON('assets/hugsim-selection.json').then(data=>{
+  const mediaURL = path => `${path}?v=20261124-trajectories`;
   const names={kitti360:'KITTI-360',nuscenes:'nuScenes',pandaset:'PandaSet',waymo:'Waymo'};
   const difficulties=['easy','medium','hard','extreme'];
   const tabs=$('#hugsim-tabs'),source=$('#hug-source'),select=$('#hug-select');
@@ -56,18 +57,18 @@ getJSON('assets/hugsim-selection.json').then(data=>{
     if(!items.length)return;
     current=(index+items.length)%items.length;
     const item=items[current];select.value=String(current);
-    setVideo($('#hug-video'),item.video,item.poster);
+    setVideo($('#hug-video'),mediaURL(item.video),mediaURL(item.poster));
     $('#hug-dataset').textContent=names[item.dataset];
     $('#hug-scene').textContent=`${item.scene} \u00b7 ${item.mode}`;
     $('#hug-meta').textContent=`${item.duration_s.toFixed(2)} s \u00b7 DriveSTA-Scale Refinement`;
     $('#hug-rc').textContent=item.rc.toFixed(2);$('#hug-hd').textContent=item.hd_score.toFixed(2);
-    $('#hug-download').href=item.video;$('#hug-count').textContent=`${current+1} / ${items.length}`;
+    $('#hug-download').href=mediaURL(item.video);$('#hug-count').textContent=`${current+1} / ${items.length}`;
     const grid=$('#hug-thumbs');grid.replaceChildren();
     const offset=Math.floor(current/6)*6;
     items.slice(offset,offset+6).forEach((x,j)=>{
       const b=document.createElement('button');b.type='button';b.className='episode-card';
       b.setAttribute('aria-pressed',String(offset+j===current));
-      const img=document.createElement('img');img.src=x.poster;img.alt=`${names[x.dataset]} ${x.scene}`;img.loading='lazy';
+      const img=document.createElement('img');img.src=mediaURL(x.poster);img.alt=`${names[x.dataset]} ${x.scene}`;img.loading='lazy';
       const label=document.createElement('span');label.textContent=`${names[x.dataset]} \u00b7 ${x.scene}`;
       b.append(img,label);b.addEventListener('click',()=>show(offset+j));grid.append(b);
     });

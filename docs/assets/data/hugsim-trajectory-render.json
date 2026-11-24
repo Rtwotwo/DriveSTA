@@ -1,0 +1,1043 @@
+{
+  "episodes": [
+    {
+      "dataset": "waymo",
+      "scene": "163453191685_0_200",
+      "mode": "easy_00",
+      "frames": 80,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        6,
+        10,
+        10,
+        4,
+        29,
+        21
+      ],
+      "source_trace_sha256": "e48e5df58abea613038e2fa4c7ed473712cf8f92759fcd6dd257d0282640ebf2",
+      "poster_frame_index": 42,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0167",
+      "mode": "easy_00",
+      "frames": 59,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        8,
+        47
+      ],
+      "source_trace_sha256": "1fc3cadfdd3a86f6db9da7b4ae108c3c92e08e4ba2fcfdba2f6fe37d1a879380",
+      "poster_frame_index": 29,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "waymo",
+      "scene": "102751446607_0_200",
+      "mode": "easy_00",
+      "frames": 88,
+      "visible_waypoint_histogram": [
+        7,
+        2,
+        2,
+        4,
+        11,
+        13,
+        19,
+        30,
+        0
+      ],
+      "source_trace_sha256": "0fefa5b0bb43e67680c2849e9aaedef7614896b5d5f4e9280476f338d2c22d5b",
+      "poster_frame_index": 41,
+      "poster_visible_waypoints": 7
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0010",
+      "mode": "easy_00",
+      "frames": 50,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        8,
+        39
+      ],
+      "source_trace_sha256": "37dc2b7af95606a329bf405e0c3801a6006488c30c2e0e67b3a85ee7b848a4eb",
+      "poster_frame_index": 25,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0661",
+      "mode": "easy_00",
+      "frames": 42,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        20,
+        18
+      ],
+      "source_trace_sha256": "7ceeb41a39359336c6dbce2de0fe17e4ef87d4b753119ec0cb7d6dfc3c0132f9",
+      "poster_frame_index": 21,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "waymo",
+      "scene": "150623512729_0_200",
+      "mode": "easy_00",
+      "frames": 65,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        6,
+        45,
+        9
+      ],
+      "source_trace_sha256": "566c4f441c32bdb9e956630db2e75cf39a80d9b7562b19561efcbf1564053b2e",
+      "poster_frame_index": 40,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "waymo",
+      "scene": "938501362409_0_200",
+      "mode": "easy_00",
+      "frames": 70,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        4,
+        15,
+        48
+      ],
+      "source_trace_sha256": "f6f02f4d19c777f275906c4550a0928b8adfaada03a1caea2fdba71fe97279c6",
+      "poster_frame_index": 35,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "waymo",
+      "scene": "132384196576_0_200",
+      "mode": "easy_00",
+      "frames": 70,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        3,
+        4,
+        6,
+        57,
+        0
+      ],
+      "source_trace_sha256": "275f5c4618239023b7ae369a1976fa567573d6625bdcf2d6f8efcf44336131f3",
+      "poster_frame_index": 35,
+      "poster_visible_waypoints": 7
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0013",
+      "mode": "easy_00",
+      "frames": 41,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        7,
+        31
+      ],
+      "source_trace_sha256": "1ed0d3b95845ec6211c88e5b639304a11251d17e3b4fcc6a2295215b1c104a0c",
+      "poster_frame_index": 20,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "waymo",
+      "scene": "398895700423_0_200",
+      "mode": "easy_00",
+      "frames": 49,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        4,
+        41,
+        0
+      ],
+      "source_trace_sha256": "aa9d447cc2af2c8a82d4edc863e0c15026b461e07d7f6c8609deaf49f634b0d8",
+      "poster_frame_index": 24,
+      "poster_visible_waypoints": 7
+    },
+    {
+      "dataset": "waymo",
+      "scene": "342571611546_0_200",
+      "mode": "easy_00",
+      "frames": 31,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        3,
+        5,
+        21,
+        0
+      ],
+      "source_trace_sha256": "fcec822e45a080889e88e256a09d1936ff92a820cefcf6619b88cac6fdc1008d",
+      "poster_frame_index": 15,
+      "poster_visible_waypoints": 7
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0166",
+      "mode": "easy_00",
+      "frames": 45,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        7,
+        35
+      ],
+      "source_trace_sha256": "d9c468412a7b5481e52dc7e51874ba59fcc22ee72649d02676baac7c1b52c661",
+      "poster_frame_index": 22,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0528",
+      "mode": "easy_00",
+      "frames": 30,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        8,
+        19
+      ],
+      "source_trace_sha256": "75e9ecd14a898eba13497d809fa2d46301f5be10d4ee0b4aedc6348aa3647ace",
+      "poster_frame_index": 15,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "kitti360",
+      "scene": "0000_10320_10520",
+      "mode": "easy_00",
+      "frames": 103,
+      "visible_waypoint_histogram": [
+        1,
+        0,
+        0,
+        0,
+        2,
+        20,
+        28,
+        52,
+        0
+      ],
+      "source_trace_sha256": "0307cfde7c8b38b3fe0c0bab037e599a10a44c7e2b209b954ccad17854bd771e",
+      "poster_frame_index": 51,
+      "poster_visible_waypoints": 7
+    },
+    {
+      "dataset": "waymo",
+      "scene": "881121006469_0_200",
+      "mode": "easy_00",
+      "frames": 35,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        6,
+        14,
+        11
+      ],
+      "source_trace_sha256": "5c6ed61da409374e5ba6f25ea07dad58f259d1b4a07461d120abed28696744ac",
+      "poster_frame_index": 24,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0166",
+      "mode": "medium_01",
+      "frames": 50,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        8,
+        38
+      ],
+      "source_trace_sha256": "9ba696607ce22059d77e5374fffb59962c2ce83f5655b2f7233b015756864e58",
+      "poster_frame_index": 25,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "waymo",
+      "scene": "163453191685_0_200",
+      "mode": "medium_01",
+      "frames": 108,
+      "visible_waypoint_histogram": [
+        7,
+        15,
+        9,
+        12,
+        8,
+        7,
+        5,
+        27,
+        18
+      ],
+      "source_trace_sha256": "684a2e4198c0ec536d9408b4e2dc0110b423feaf7c558017c4404b8d51f7478f",
+      "poster_frame_index": 74,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "waymo",
+      "scene": "342571611546_0_200",
+      "mode": "medium_01",
+      "frames": 124,
+      "visible_waypoint_histogram": [
+        75,
+        13,
+        17,
+        12,
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "source_trace_sha256": "32dca47a839195f465544785825e836bf36f10483b5bfe20c58787c2ca159f8b",
+      "poster_frame_index": 20,
+      "poster_visible_waypoints": 4
+    },
+    {
+      "dataset": "waymo",
+      "scene": "148697329729_0_200",
+      "mode": "medium_02",
+      "frames": 103,
+      "visible_waypoint_histogram": [
+        5,
+        5,
+        11,
+        18,
+        29,
+        15,
+        4,
+        16,
+        0
+      ],
+      "source_trace_sha256": "e457cc51c818be6f4eba405031f64f7c9b28963ceb70382b0dbd6a3c6f2ed2b8",
+      "poster_frame_index": 87,
+      "poster_visible_waypoints": 7
+    },
+    {
+      "dataset": "waymo",
+      "scene": "102751446607_0_200",
+      "mode": "medium_02",
+      "frames": 161,
+      "visible_waypoint_histogram": [
+        24,
+        6,
+        9,
+        21,
+        38,
+        53,
+        10,
+        0,
+        0
+      ],
+      "source_trace_sha256": "e31e053ea7487719e8dfc1e45e863f3c17ef96885ea1937c1b8a20308e1b4c29",
+      "poster_frame_index": 84,
+      "poster_visible_waypoints": 6
+    },
+    {
+      "dataset": "waymo",
+      "scene": "132384196576_0_200",
+      "mode": "medium_01",
+      "frames": 98,
+      "visible_waypoint_histogram": [
+        3,
+        6,
+        9,
+        11,
+        8,
+        7,
+        5,
+        49,
+        0
+      ],
+      "source_trace_sha256": "eb0f1046dc7fec6e9288a16bafc8e1dce1e76871c828d86c876b809e5db25ae7",
+      "poster_frame_index": 49,
+      "poster_visible_waypoints": 7
+    },
+    {
+      "dataset": "pandaset",
+      "scene": "039",
+      "mode": "medium_02",
+      "frames": 47,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        4,
+        7,
+        20,
+        14
+      ],
+      "source_trace_sha256": "9befa4786f149fd35ea49201e5b3c4794b00b839c5e312a9e7dc32427a496ed2",
+      "poster_frame_index": 33,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "kitti360",
+      "scene": "0000_10320_10520",
+      "mode": "medium_00",
+      "frames": 205,
+      "visible_waypoint_histogram": [
+        9,
+        1,
+        16,
+        25,
+        40,
+        57,
+        38,
+        19,
+        0
+      ],
+      "source_trace_sha256": "b77cec4e2ac5d8367335e5c3dbf32c6d70d26304cb7092a9c5346101d5ae5633",
+      "poster_frame_index": 144,
+      "poster_visible_waypoints": 7
+    },
+    {
+      "dataset": "waymo",
+      "scene": "166085257829_0_200",
+      "mode": "medium_02",
+      "frames": 127,
+      "visible_waypoint_histogram": [
+        19,
+        4,
+        6,
+        20,
+        35,
+        35,
+        8,
+        0,
+        0
+      ],
+      "source_trace_sha256": "c38fc6ad44cba3f5281cdbeb64182b4ac611ae718f5590e6611b9f522b4c6af3",
+      "poster_frame_index": 119,
+      "poster_visible_waypoints": 6
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0013",
+      "mode": "hard_00",
+      "frames": 55,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        19,
+        7,
+        27
+      ],
+      "source_trace_sha256": "c455f0afab8f952d69f13d4b2b14626498fa27f0688a57af461e4fe10234141c",
+      "poster_frame_index": 28,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0528",
+      "mode": "hard_01",
+      "frames": 32,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        9,
+        20
+      ],
+      "source_trace_sha256": "f0b366bb5dc79a7f44b1603b6b7e0ab3db8f6a32dae96a51e0b9add335de1ce5",
+      "poster_frame_index": 16,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0661",
+      "mode": "hard_00",
+      "frames": 86,
+      "visible_waypoint_histogram": [
+        3,
+        0,
+        0,
+        3,
+        1,
+        23,
+        26,
+        30,
+        0
+      ],
+      "source_trace_sha256": "eb644d5e7cd7b16cb07ab21be425defa96a512e421785bcebdf58c407dc86ca1",
+      "poster_frame_index": 21,
+      "poster_visible_waypoints": 7
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0071",
+      "mode": "hard_00",
+      "frames": 88,
+      "visible_waypoint_histogram": [
+        4,
+        2,
+        2,
+        1,
+        1,
+        5,
+        20,
+        53,
+        0
+      ],
+      "source_trace_sha256": "5b9723816d51bdfddb9256bdbdbdc28301d5add1cc8285754be8312fc7031dc5",
+      "poster_frame_index": 41,
+      "poster_visible_waypoints": 7
+    },
+    {
+      "dataset": "waymo",
+      "scene": "163453191685_0_200",
+      "mode": "hard_00",
+      "frames": 105,
+      "visible_waypoint_histogram": [
+        26,
+        2,
+        5,
+        10,
+        4,
+        3,
+        4,
+        26,
+        25
+      ],
+      "source_trace_sha256": "7bf838fdd98f43cf66ee146aa88f6c5a6720385a1f4ae244567eaf31ef884073",
+      "poster_frame_index": 67,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0010",
+      "mode": "hard_00",
+      "frames": 50,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        7,
+        40
+      ],
+      "source_trace_sha256": "7182207dee296ec1384d7b20b258164ff17c5fc58f2c4fd1cb5c1cdba03f1040",
+      "poster_frame_index": 25,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "waymo",
+      "scene": "398895700423_0_200",
+      "mode": "hard_01",
+      "frames": 51,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        3,
+        5,
+        41,
+        0
+      ],
+      "source_trace_sha256": "13422f15336e7cd794f8fbf042d7f50998bb9ce67d7ce3e09a1dd59346f545aa",
+      "poster_frame_index": 25,
+      "poster_visible_waypoints": 7
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0166",
+      "mode": "hard_00",
+      "frames": 47,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        9,
+        34
+      ],
+      "source_trace_sha256": "7b26bf09c424d89f19333f3cd8ab14b542f8ff57064768e58351540e5ae6cedf",
+      "poster_frame_index": 23,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0062",
+      "mode": "hard_00",
+      "frames": 54,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        20,
+        29
+      ],
+      "source_trace_sha256": "d26c1b24995caae1696d13eb55461ffa3c9355c66ce859dfa5df3108fc90b927",
+      "poster_frame_index": 27,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "waymo",
+      "scene": "166085257829_0_200",
+      "mode": "hard_00",
+      "frames": 108,
+      "visible_waypoint_histogram": [
+        21,
+        4,
+        2,
+        11,
+        22,
+        16,
+        27,
+        5,
+        0
+      ],
+      "source_trace_sha256": "2890e7ac54b0fd4ce0583b53a62c9e5288cd1bf15f8cd87bcd890e1da759df2d",
+      "poster_frame_index": 53,
+      "poster_visible_waypoints": 7
+    },
+    {
+      "dataset": "waymo",
+      "scene": "150623512729_0_200",
+      "mode": "hard_01",
+      "frames": 69,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        5,
+        5,
+        5,
+        51,
+        3
+      ],
+      "source_trace_sha256": "d2325747eae215b944af1bb57bb45bf75c2f834d97a858ff2955124483b369e6",
+      "poster_frame_index": 45,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0064",
+      "mode": "hard_00",
+      "frames": 94,
+      "visible_waypoint_histogram": [
+        9,
+        0,
+        1,
+        4,
+        4,
+        18,
+        20,
+        34,
+        4
+      ],
+      "source_trace_sha256": "fe7cb5ad06b850cfc3447b6e637ff25711ecbaf3b0aba0c106e8b06211d44372",
+      "poster_frame_index": 90,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "waymo",
+      "scene": "102751446607_0_200",
+      "mode": "extreme_01",
+      "frames": 83,
+      "visible_waypoint_histogram": [
+        2,
+        1,
+        1,
+        1,
+        9,
+        17,
+        26,
+        26,
+        0
+      ],
+      "source_trace_sha256": "21eb341ecf0081c92bac1675386c6c38155abec51266debdda68e781b72b8f77",
+      "poster_frame_index": 35,
+      "poster_visible_waypoints": 7
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0661",
+      "mode": "extreme_01",
+      "frames": 42,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        16,
+        22
+      ],
+      "source_trace_sha256": "21e740099c99293070644983646db0caaf47d61830c5834b45fd43b1d9f7aefb",
+      "poster_frame_index": 21,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0166",
+      "mode": "extreme_01",
+      "frames": 44,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        6,
+        35
+      ],
+      "source_trace_sha256": "a4e9baac774cdf6b196ef64c3d5e1f32a9a35ce7f0fc177a7a925c51cea842dc",
+      "poster_frame_index": 22,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "waymo",
+      "scene": "938501362409_0_200",
+      "mode": "extreme_01",
+      "frames": 70,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        4,
+        15,
+        48
+      ],
+      "source_trace_sha256": "dfb3416f4489a834293669e84d5ba1f5bff61e91c2d33ce6fb5b6dac2a158b78",
+      "poster_frame_index": 35,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "waymo",
+      "scene": "150623512729_0_200",
+      "mode": "extreme_01",
+      "frames": 61,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        5,
+        37,
+        15
+      ],
+      "source_trace_sha256": "c9278ae92f42d05214419b0c7a220896fe65bf31184018f3df6fbba7f7868bba",
+      "poster_frame_index": 29,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0010",
+      "mode": "extreme_01",
+      "frames": 49,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        8,
+        38
+      ],
+      "source_trace_sha256": "d8171c12c241b6d96a7fbbe296c1ccb117168ad0c4fbfd79fd70f92b324b27a8",
+      "poster_frame_index": 24,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "waymo",
+      "scene": "322492347634_0_200",
+      "mode": "extreme_01",
+      "frames": 50,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        3,
+        7,
+        36
+      ],
+      "source_trace_sha256": "32b8d6ad911a4652f0bd68744fbb53fcc27cce04dc0cb7aef0666de9a3cea395",
+      "poster_frame_index": 25,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "waymo",
+      "scene": "132384196576_0_200",
+      "mode": "extreme_01",
+      "frames": 69,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        4,
+        6,
+        56,
+        0
+      ],
+      "source_trace_sha256": "9cdf4eaab64da519de0c22356bae1d2370be9ced2611eabddbc7dfe4c357f488",
+      "poster_frame_index": 34,
+      "poster_visible_waypoints": 7
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0167",
+      "mode": "extreme_01",
+      "frames": 57,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        9,
+        45
+      ],
+      "source_trace_sha256": "baa901ab5d210b08c9f8feffc75d2b8dddddd7093dcc1a7d447b30f6401e7345",
+      "poster_frame_index": 28,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0071",
+      "mode": "extreme_01",
+      "frames": 80,
+      "visible_waypoint_histogram": [
+        3,
+        0,
+        1,
+        2,
+        1,
+        2,
+        16,
+        48,
+        7
+      ],
+      "source_trace_sha256": "ae243fe7e98cd218603ac27d52565524c8e9e25943092ba0d400e372939339f7",
+      "poster_frame_index": 20,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "nuscenes",
+      "scene": "scene-0528",
+      "mode": "extreme_01",
+      "frames": 31,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        8,
+        19
+      ],
+      "source_trace_sha256": "5075013df11443e3b1663bc18bfc2727cd68f6aa7cba4406b2313e280c2e7de9",
+      "poster_frame_index": 15,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "pandaset",
+      "scene": "039",
+      "mode": "extreme_01",
+      "frames": 29,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        3,
+        5,
+        19
+      ],
+      "source_trace_sha256": "ce15612b6ebce7ba8c829dff1aff89e2a1a1885f7d0be599e201e4e936a605e4",
+      "poster_frame_index": 14,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "waymo",
+      "scene": "398895700423_0_200",
+      "mode": "extreme_01",
+      "frames": 50,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        5,
+        41,
+        0
+      ],
+      "source_trace_sha256": "896a8640e2f47f36d8cfcb1b056285bb320ff6275f6cf1309c058a1f9750e013",
+      "poster_frame_index": 25,
+      "poster_visible_waypoints": 7
+    },
+    {
+      "dataset": "pandaset",
+      "scene": "028",
+      "mode": "extreme_01",
+      "frames": 35,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        4,
+        16,
+        13
+      ],
+      "source_trace_sha256": "2b65b2c31fd5d9a4d00f86d75a8b09007e3284a06860baa596ab64d1010f2a11",
+      "poster_frame_index": 18,
+      "poster_visible_waypoints": 8
+    },
+    {
+      "dataset": "pandaset",
+      "scene": "053",
+      "mode": "extreme_01",
+      "frames": 35,
+      "visible_waypoint_histogram": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        5,
+        12,
+        15
+      ],
+      "source_trace_sha256": "66549208a312eb73591036b09c57b7d7807792af1056d295f6c4a25a66dc942a",
+      "poster_frame_index": 20,
+      "poster_visible_waypoints": 8
+    }
+  ],
+  "points_per_plan": 8,
+  "waypoint_dt_s": 0.5,
+  "horizon_s": 4,
+  "video_fps": 4,
+  "offscreen_policy": "Clip at the calibrated image boundary; do not relocate points or add insets.",
+  "provenance": "Original per-frame model predictions and matching pre-step camera states.",
+  "updated": "2026-11-24",
+  "validation": {
+    "episodes": 51,
+    "plan_roundtrip_max_error_m": 5.684341886080802e-14,
+    "first_frame_mean_absolute_error_range": [
+      1.4311064814814816,
+      2.821667901234568
+    ],
+    "all_episode_videos_decoded": true,
+    "montage_frames": 9654,
+    "montage_duration_s": 321.8
+  },
+  "montage_sha256": "a0afe69bc112c24aacf2f9a8c75955338e0b52f5ec9c94922370ad21854567e2"
+}
